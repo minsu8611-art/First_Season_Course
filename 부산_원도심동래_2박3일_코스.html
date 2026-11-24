@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>가이드 고민수 코스 — 부산 원도심·동래 2박3일</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#1a1208; --paper:#f5f0e8; --cream:#ede8dc; --warm:#c8a96e; --gold:#b8860b;
+  --rust:#a0522d; --accent:#8b1a1a; --smoke:#7a7060; --sea:#1f4e66;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--paper); color:var(--ink); font-family:"Noto Sans KR",sans-serif; font-weight:300; line-height:1.8; }
+.cover { background:var(--ink); color:var(--paper); padding:64px 48px 48px; position:relative; overflow:hidden; }
+.cover::before { content:""; position:absolute; top:-60px; right:-60px; width:280px; height:280px; border-radius:50%; background:rgba(184,134,11,0.08); }
+.cover-eyebrow { font-size:10px; letter-spacing:4px; color:var(--warm); margin-bottom:20px; }
+.cover-brand { font-family:"Noto Serif KR",serif; font-size:13px; color:var(--warm); margin-bottom:6px; letter-spacing:1px; }
+.cover-title { font-family:"Noto Serif KR",serif; font-weight:700; font-size:clamp(26px,5vw,40px); color:var(--paper); margin-bottom:6px; line-height:1.25; }
+.cover-hanja { font-family:"Noto Serif KR",serif; font-size:14px; color:var(--warm); margin-bottom:36px; }
+.cover-meta { display:flex; gap:28px; flex-wrap:wrap; }
+.cover-meta-item { border-left:2px solid var(--warm); padding-left:14px; }
+.cover-meta-item .label { font-size:10px; letter-spacing:2px; color:var(--smoke); display:block; }
+.cover-meta-item .value { font-size:13px; color:var(--cream); font-weight:400; }
+.legend { background:var(--ink); border-top:1px solid rgba(200,169,110,0.2); padding:10px 48px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; font-size:11px; }
+.legend-label { color:var(--smoke); }
+.src-tag { display:inline-block; padding:2px 9px; border-radius:2px; font-size:10px; font-weight:500; }
+.src-record { background:#1a3a2a; color:#7ecba0; border:1px solid #2d5a3a; }
+.src-lore { background:#2a2a1a; color:#c8b870; border:1px solid #4a4a2a; }
+.course-intro { background:#1e1810; border-bottom:1px solid rgba(200,169,110,0.2); }
+.course-intro-inner { max-width:860px; margin:0 auto; padding:36px 24px; display:flex; flex-direction:column; gap:28px; }
+.intro-message { border-left:4px solid var(--gold); padding:4px 0 4px 20px; }
+.intro-message-label, .intro-desc-label { font-size:10px; letter-spacing:3px; color:var(--warm); margin-bottom:10px; }
+.intro-message p { font-family:"Noto Serif KR",serif; font-size:14px; line-height:2; color:var(--cream); }
+.intro-desc { border-top:1px solid rgba(200,169,110,0.15); padding-top:24px; }
+.intro-desc p { font-size:12px; line-height:1.9; color:#b8b0a0; margin-bottom:12px; }
+.intro-desc strong { color:var(--warm); font-weight:500; }
+.layer-table { width:100%; border-collapse:collapse; font-size:12px; color:#d8d0c0; margin:6px 0 14px; }
+.layer-table th, .layer-table td { border:1px solid rgba(200,169,110,0.25); padding:6px 9px; text-align:left; vertical-align:top; }
+.layer-table th { color:var(--warm); font-weight:500; }
+.tab-panel { max-width:860px; margin:0 auto; padding:40px 24px 40px; }
+.panel-title { font-family:"Noto Serif KR",serif; font-weight:700; font-size:24px; margin-bottom:6px; }
+.panel-desc { color:var(--smoke); font-size:13px; margin-bottom:28px; padding-bottom:20px; border-bottom:1px solid #d4c9b0; }
+.sheet { background:#fff; border:1px solid #d4c9b0; margin-bottom:36px; }
+.sheet > summary { cursor:pointer; padding:14px 18px; font-family:"Noto Serif KR",serif; font-weight:600; font-size:15px; list-style:none; }
+.sheet > summary::-webkit-details-marker { display:none; }
+.sheet > summary::after { content:" ▾"; color:var(--warm); }
+.sheet[open] > summary::after { content:" ▴"; }
+.sheet-body { padding:0 18px 18px; }
+.sheet-note { font-size:11px; color:var(--rust); margin-bottom:10px; }
+.cost-table { width:100%; border-collapse:collapse; font-size:12px; margin-top:4px; }
+.cost-table th { background:var(--cream); padding:7px 10px; text-align:left; font-weight:500; border:1px solid #d4c9b0; vertical-align:top; }
+.cost-table td { padding:6px 10px; border:1px solid #e0d8c8; vertical-align:top; }
+.day-header { margin:44px 0 6px; padding:14px 18px; background:var(--ink); color:var(--paper); border-left:6px solid var(--gold); }
+.day-header:first-of-type { margin-top:8px; }
+.day-header .d-label { font-size:10px; letter-spacing:3px; color:var(--warm); }
+.day-header .d-title { font-family:"Noto Serif KR",serif; font-size:18px; font-weight:600; }
+.day-header .d-sub { font-size:12px; color:#b8b0a0; margin-top:2px; }
+.layer-badge { display:inline-block; font-size:10px; padding:1px 8px; background:var(--sea); color:#e8f2f6; margin-right:6px; vertical-align:2px; }
+.sch-body { padding:16px 0 24px 20px; position:relative; border-bottom:1px dashed #e0d8c8; border-left:2px solid #d4c9b0; margin-left:2px; }
+.sch-body::before { content:""; position:absolute; left:-5px; top:24px; width:8px; height:8px; background:var(--warm); border-radius:50%; }
+.sch-place { font-family:"Noto Serif KR",serif; font-size:16px; font-weight:600; }
+.sch-sub { font-size:12px; color:var(--smoke); margin-top:3px; }
+.sch-badges { margin:8px 0 4px; }
+.sch-badge { display:inline-block; font-size:10px; padding:2px 7px; border:1px solid #c8b898; color:var(--rust); margin-right:4px; margin-bottom:4px; }
+.sch-header { cursor:pointer; position:relative; padding-right:26px; }
+.sch-toggle { position:absolute; top:2px; right:0; font-size:11px; color:var(--warm); }
+.sch-content { display:none; margin-top:12px; }
+.sch-content.open { display:block; }
+.place-block { border:1px solid #d4c9b0; background:#faf7f0; padding:16px 18px 6px; margin-top:4px; }
+.place-title { font-family:"Noto Serif KR",serif; font-weight:600; font-size:15px; margin-bottom:6px; }
+.place-desc { font-size:13px; color:var(--smoke); line-height:1.85; margin-bottom:12px; }
+.place-route { font-size:12px; color:var(--rust); background:var(--cream); padding:8px 12px; margin-bottom:16px; border-left:3px solid var(--warm); }
+.spot-card { border-top:1px dashed #d4c9b0; padding:10px 0; }
+.spot-card:first-of-type { border-top:none; padding-top:0; }
+.spot-name { font-family:"Noto Serif KR",serif; font-weight:600; font-size:14px; margin-bottom:2px; }
+.spot-sub { font-size:12px; color:var(--smoke); margin-bottom:8px; }
+.detail-btns { display:flex; gap:6px; flex-wrap:wrap; margin-top:10px; }
+.detail-btn { font-size:11px; color:var(--accent); cursor:pointer; border:1px solid #d4c9b0; background:var(--cream); padding:4px 10px; font-family:inherit; }
+.detail-btn:hover { background:#e0d8c8; }
+.detail-btn.open { background:var(--accent); color:#fff; border-color:var(--accent); }
+.detail-body { display:none; margin-top:8px; border:1px solid #e0d8c8; font-size:13px; line-height:1.8; }
+.detail-body.open { display:block; }
+.detail-inner { padding:16px 18px; background:#fff; }
+.detail-inner h4 { font-size:12px; color:var(--rust); font-weight:600; margin:16px 0 8px; padding-bottom:4px; border-bottom:1px solid #e8d8c0; }
+.detail-inner h4:first-child { margin-top:4px; }
+.detail-inner ul, .detail-inner ol { padding-left:18px; }
+.detail-inner li { margin-bottom:4px; }
+.src-row { display:flex; align-items:flex-start; gap:10px; margin-bottom:10px; }
+.src-row:last-child { margin-bottom:0; }
+.src-row .src-tag { flex-shrink:0; margin-top:3px; }
+.notice-inline { background:#fff8f0; border-left:3px solid var(--rust); padding:6px 12px; margin-top:8px; font-size:11px; color:var(--rust); font-weight:500; }
+.recipe { border:1px solid #e0d8c8; padding:10px 12px; margin-bottom:10px; background:#fcfaf5; }
+.recipe-name { font-weight:500; color:var(--accent); }
+.recipe-meta { font-size:11px; color:var(--smoke); }
+.cost-block { max-width:860px; margin:0 auto; padding:0 24px 80px; }
+.cost-block-title { font-family:"Noto Serif KR",serif; font-size:15px; font-weight:600; margin-bottom:12px; }
+.cost-total { font-size:12px; color:var(--smoke); margin-top:8px; padding:8px 12px; background:var(--cream); }
+@media (max-width:600px){ .cover{padding:48px 20px 36px;} .legend{padding:10px 20px;} }
+
+.guide-step { border-left:3px solid var(--sea); padding:2px 0 2px 12px; margin-bottom:14px; }
+.guide-step .gs-label { font-size:12px; font-weight:500; margin-bottom:6px; }
+.guide-step ul { margin:0; padding-left:18px; }
+.chk { color:var(--rust); font-weight:500; }
+.mk { color:#3d517f; font-weight:700; font-size:11.5px; white-space:nowrap; }
+.guide-tip { background:var(--ink); color:var(--paper); padding:12px 16px; margin-bottom:16px; border-left:4px solid var(--gold); font-size:13px; font-family:"Noto Serif KR",serif; line-height:1.8; }
+.guide-tip-label { font-size:10px; letter-spacing:2px; color:var(--warm); margin-bottom:6px; font-family:"Noto Sans KR",sans-serif; }
+.bridge { background:#f0ead8; border:1px solid #d4c9b0; border-left:4px solid var(--accent); padding:10px 14px; margin:0 0 12px; font-size:12.5px; line-height:1.8; }
+.bridge-row { display:flex; gap:8px; align-items:flex-start; }
+.bridge-row + .bridge-row { margin-top:4px; }
+.bridge-k { flex-shrink:0; font-size:10px; font-weight:500; letter-spacing:1px; color:#fff; background:var(--accent); padding:1px 7px; margin-top:4px; }
+.bridge-k.next { background:var(--smoke); }
+.sc { border:1px solid #d4c9b0; background:#fffdf7; padding:12px 14px; margin:0 0 12px; }
+.sc:last-child { margin-bottom:0; }
+.sc-t { font-family:'Noto Serif KR',serif; font-size:15px; font-weight:700; color:var(--ink); line-height:1.6; margin-bottom:8px; }
+.sc-row { display:flex; gap:8px; font-size:13px; line-height:1.75; margin-top:5px; }
+.sc-k { flex-shrink:0; min-width:52px; font-size:10.5px; font-weight:700; letter-spacing:.5px; padding:2px 0; color:var(--accent); }
+.sc-say { background:rgba(34,51,90,0.05); border-left:3px solid #3d517f; padding:6px 10px; color:#22335a; }
+.sc-act { background:rgba(176,122,30,0.10); padding:6px 10px; color:#5f420c; }
+.sc-alt { background:rgba(46,107,79,0.08); padding:6px 10px; color:#2e5a44; }
+.sc-tags { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
+.sc-tag { font-size:10.5px; padding:1px 7px; border-radius:9px; background:rgba(34,51,90,0.08); color:#22335a; }
+.sc-tag.tr-jeongsa { background:#e4efe4; color:#2e6b4f; font-weight:700; }
+.sc-tag.tr-yasa { background:#f6ecd0; color:#8a6a10; font-weight:700; }
+.sc-tag.tr-field { background:#e2ece6; color:#2e6b4f; font-weight:700; }
+.sc-tag.tr-check { background:#f4e0dc; color:#9a3324; font-weight:700; }
+.sc-tag.act { background:rgba(176,122,30,0.18); color:#7a5410; font-weight:700; }
+.qc { background:var(--ink); color:var(--paper); border-left:4px solid var(--gold); padding:12px 14px; margin:0 0 12px; }
+.qc .mk { color:var(--warm); }
+.qc-k { font-size:10.5px; letter-spacing:1.5px; color:var(--warm); font-weight:700; margin-bottom:6px; }
+.qc-say { font-family:'Noto Serif KR',serif; font-size:14px; line-height:1.85; }
+.qc-note { font-size:11.5px; color:#cfc6b4; margin-top:8px; border-top:1px solid rgba(200,169,110,0.3); padding-top:6px; }
+.or-row { display:flex; gap:8px; font-size:13px; line-height:1.75; margin-top:6px; font-family:'Noto Serif KR',serif; }
+.or-k { flex-shrink:0; min-width:64px; font-size:10.5px; font-weight:700; color:var(--warm); padding-top:3px; font-family:'Noto Sans KR',sans-serif; }
+.flow6 { border:1px solid #c8b898; background:#f7f2e6; padding:10px 12px; margin:0 0 12px; }
+.flow6-h { font-size:10.5px; font-weight:700; letter-spacing:1px; color:var(--rust); margin-bottom:6px; }
+.flow6 table { width:100%; border-collapse:collapse; font-size:12.5px; }
+.flow6 td { padding:4px 6px; border-bottom:1px solid rgba(200,169,110,0.25); vertical-align:top; line-height:1.65; }
+.flow6 td.n { white-space:nowrap; color:var(--rust); font-weight:700; width:56px; }
+.ver { display:flex; gap:8px; font-size:12.5px; line-height:1.7; margin-top:6px; }
+.ver-k { flex-shrink:0; font-size:10px; font-weight:700; color:#fff; background:var(--rust); padding:1px 7px; height:fit-content; margin-top:3px; }
+
+.spare { margin:12px 0 0; border:1px dashed #c8b898; background:#fbf8f0; }
+.spare > summary { cursor:pointer; padding:8px 12px; font-size:12px; font-weight:700; color:var(--rust); list-style:none; }
+.spare > summary::before { content:"＋ "; }
+.spare[open] > summary::before { content:"－ "; }
+.spare > .sc { margin:8px 10px 10px; }
+
+/* v5 — 촬영·팁 / 낭만 / 톤 신호 */
+.tone-line{font-size:13px;background:#fff7e6;border-left:3px solid #e0a03c;padding:6px 10px;margin:0 0 10px;border-radius:4px;color:#5a4214}
+.tip-sec{margin:10px 0 0}
+.tip-sec h5{font-size:13px;margin:0 0 4px;color:#333}
+.tip-sec ul{margin:0 0 4px 18px;padding:0}
+.tip-sec li{font-size:13px;line-height:1.55}
+.roman-card{border:1px solid #c9b8e8;background:#f8f4ff;border-radius:8px;padding:10px 12px;margin:4px 0 8px}
+.roman-card .rc-type{display:inline-block;font-size:11px;font-weight:700;background:#6b4fa8;color:#fff;border-radius:10px;padding:1px 8px;margin-bottom:6px}
+.roman-card table{width:100%;border-collapse:collapse;font-size:13px}
+.roman-card th{width:72px;text-align:left;vertical-align:top;color:#6b4fa8;padding:3px 6px 3px 0;white-space:nowrap}
+.roman-card td{padding:3px 0;line-height:1.5}
+@media (prefers-color-scheme: dark){
+ .tone-line{background:#3a3020;color:#f0d9a8}
+ .tip-sec h5{color:#ddd}
+ .roman-card{background:#2a2438;border-color:#5a4a80}
+ .roman-card th{color:#c4b0f0}
+}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-eyebrow">여행바구니 · 가이드 고민수 · 부산 2박3일 코스</div>
+  <div class="cover-brand">초량 · 북항 · 남포동 · 동래</div>
+  <div class="cover-title">부산 원도심·동래 2박3일</div>
+  <div class="cover-hanja">이 좁은 원도심 땅 밑에는, 몇 겹의 부산이 쌓여 있을까</div>
+  <div class="cover-meta">
+    <div class="cover-meta-item"><span class="label">일정</span><span class="value">화 점심 시작 → 목 점심 종료 (테스트 가정, 1월)</span></div>
+    <div class="cover-meta-item"><span class="label">이동</span><span class="value">도보 + 도시철도 (차량 없음)</span></div>
+    <div class="cover-meta-item"><span class="label">숙박</span><span class="value">1박 부산역 주변 / 2박 남포동 일대 조리 가능 숙소</span></div>
+    <div class="cover-meta-item"><span class="label">진행</span><span class="value">가이드 고민수</span></div>
+  </div>
+</div>
+
+<div class="legend">
+  <span class="legend-label">출처 기준</span>
+  <span class="src-tag src-record">정사</span>
+  <span class="src-tag src-lore">야사·설</span>
+  <span class="legend-label">· <span class="chk">[확인 필요]</span> 재확인 대상 · ⚠️ 단일 출처 · <span class="mk">[여기서 질문]</span> <span class="mk">[침묵]</span> <span class="mk">[천천히]</span> <span class="mk">[추정]</span> = 원고 표기 기호(기준 0-2) · 카드 태그 번호 = 기준 2부 소재 / 4부 기법</span>
+</div>
+
+<div class="course-intro">
+  <div class="course-intro-inner">
+    <div class="intro-message">
+      <div class="intro-message-label">코스 전체 질문 (오프닝 → 클로징 회수)</div>
+      <p>부산역 앞 이 좁은 원도심은 밀어버리지 않고 겹겹이 쌓아 올린 동네다. 피란민의 판잣집 아래에 일제강점기 건물이, 그 아래에 조선 후기 왜관 터가 있다. 그렇다면 이 원도심 땅 밑에는 대체 몇 겹의 부산이 쌓여 있을까? 그리고 가장 아래층은 어디에 있을까?</p>
+    </div>
+    <div class="intro-desc">
+      <div class="intro-desc-label">코스 구조 — 위층에서 아래층으로</div>
+      <p>2박3일 동안 원도심의 층을 위에서부터 하나씩 걷고, 마지막 날 원도심이 생기기 전의 부산인 <strong>동래</strong>에서 가장 아래층을 확인한다. 모든 이동은 걷거나 도시철도로 한다 — 오래된 동네일수록 걸어서 봐야 보인다는 것이 이 코스의 방식이다.</p>
+      <table class="layer-table">
+        <tr><th>일차</th><th>장소</th><th>걷는 층</th></tr>
+        <tr><td>1일차 (화)</td><td>초량이바구길 · 초량 일대</td><td>피란민 산동네(1950년대) + 개항기 근대 건물(1900~1920년대) + 청관거리(1884~)</td></tr>
+        <tr><td>2일차 (수) 오전</td><td>북항친수공원</td><td>지금의 층 — 개항 146년 만에 시민에게 열린 항구(2022)</td></tr>
+        <tr><td>2일차 (수) 오후</td><td>남포동·광복동·중앙동</td><td>피란 시장(1950년대) → 일제강점기 건물(1910~1920년대) → 그 아래 초량왜관 터(1678)</td></tr>
+        <tr><td>3일차 (목)</td><td>동래</td><td>가장 아래층 — 원도심이 생기기 전 조선 부산의 중심 동래부, 1592년</td></tr>
+      </table>
+      <p><strong>이 코스의 시간축:</strong> 1547년(동래현 → 동래도호부) → 1592년(임진왜란, 부산진성·동래성 함락) → 1678년(초량왜관, 지금의 용두산 일대) → 1876년(개항) → 1884년(초량 청국 영사관) → 1900년(남선창고) → 1914년(시가지는 부산부, 나머지는 동래군으로 분리) → 1929년(동양척식주식회사 부산지점) → 1942년(동래읍 부산 편입) → 1950~53년(피란수도) → 2022년(북항친수공원 전면 개방) → 현재.</p>
+      <p><strong>재료 출처:</strong> 초량이바구길 도보역사 파일(1일차), 부산원도심 도보역사 파일(2일차 남포동), 부산 요리 파일(3일차 조식), 부산 우천 내륙권 파일(3일차 동래). 북항친수공원·동래부 동헌·층을 잇는 연결 멘트는 신규 작성. 원본 파일은 수정하지 않았다.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tab-panel">
+
+  <details class="sheet">
+    <summary>📋 코스 설계 시트 (§9) — 초안</summary>
+    <div class="sheet-body">
+      <div class="sheet-note">v4 — 밀도 보강(이야기 탭 신규 조사 + 예비 카드). v3 — 「역사 강의 원고 작성 기준」 적용. 트레잇·클릭 훅은 초안이며 확정 전입니다.</div>
+      <table class="cost-table">
+        <tr><th>코스명·유형·지역</th><td>부산 원도심·동래 2박3일 / 숙박 코스 / 도보 + 도시철도</td></tr>
+        <tr><th>코스 매력 한 문장 (P1)</th><td>밀어버리지 않고 겹겹이 쌓아 올린 원도심을, 위층부터 걸어 내려가 가장 아래층 동래까지 확인하는 3일</td></tr>
+        <tr><th>주력 P / 보조 P</th><td>주력 P2(인지적 밀도) / 보조 P5(대비·반전: 원도심 아래층은 원도심 밖에 있었다), P6(도보·도시철도 이동 팁)</td></tr>
+        <tr><th>클릭 훅 후보</th><td>P1: "밀지 않고 쌓아 올린 동네, 부산 원도심" / P5: "부산의 가장 오래된 층은 부산역 앞에 없었다"</td></tr>
+        <tr><th>가이드 트레잇</th><td>정직함(A: 부산진성·동래성 함락 순서, 전승과 기록 구분) / 로컬음식 도전(초량육미·어묵·동래파전) / 조급증 자조(C: 냄비 하나로 조식 세 가지)</td></tr>
+        <tr><th>포함 구간</th><td>도보역사(1~3일차), 이슈 구간(북항친수공원), 조식 요리여행(3일차)</td></tr>
+        <tr><th>풍족 경로</th><td>① 설명 / ② 이동 편의 팁(도시철도 1·4호선) / ③ 사진 팁(김민부전망대·북항·부산타워) / ⑥ 음식 경험</td></tr>
+        <tr><th>기획테마 태그</th><td>피란수도 / 장기려 / 유치환 / 이중섭(남포동 다방) / 송상현·임진왜란 / 초량왜관</td></tr>
+        <tr><th>질문 → 회수</th><td>오프닝: 1일차 남선창고 터(부산역 맞은편) / 회수: 3일차 동래파전거리 점심</td></tr>
+        <tr><th>원고 기준</th><td>「역사 강의 원고 작성 기준」 적용(2026-11-18): 소재 카드에 2부 소재·4부 기법 번호 태그, ★ 핵심 장소 7곳(남선창고·168계단·장기려·용두산·국제시장·임진왜란역사관·동래파전)은 6단계 표 + 30초·3분 버전, 나머지는 30초 또는 카드만. 첫 3분(남선창고)·하루 시작(2일차 북항·3일차 조식)·전환 멘트. 예상 질문·꼬리 칸.</td></tr><tr><th>대상 레이어</th><td>기본: 성인 + 이동투어(5-1·5-4). 👥 활동마다 장애인 단체 대체안(5-6). 168계단은 하늘길 엘리베이터, 유치환의 우체통은 엘리베이터 없음·단차.</td></tr><tr><th>정서 곡선</th><td>1일차 감정 정점은 장기려(기다림) → 바로 우체통 엽서 쓰기로 올림. 3일차 가장 무거운 임진왜란역사관 → 동헌(발견의 톤) → 충렬사(짧게) → 파전(여운)(3-5).</td></tr><tr><th>발행</th><td>촬영 후 분량으로 결정</td></tr>
+      </table>
+    </div>
+  </details>
+
+  <div class="panel-title">일정</div>
+  <div class="panel-desc">1일차: 부산역 점심 → 남선창고 터 → 옛 백제병원 → 담장갤러리·초량교회 → 168계단 → 김민부전망대 → 이바구공작소 → 장기려 더나눔 → 유치환의 우체통 → 초량 일대(시장·텍사스거리·차이나타운·초량육미 저녁)<br>2일차: 북항친수공원 → 백산기념관 → 부산근현대역사관 → 용두산공원·부산타워 → 보수동책방골목 → 국제시장 → 부평깡통시장(장보기) → BIFF광장 → 자갈치시장·건어물도매시장(장보기·저녁)<br>3일차: 숙소 조식 요리여행 → 동래읍성임진왜란역사관 → 동래부 동헌 → 충렬사 → 동래파전거리(점심·클로징)</div>
+
+  <!-- ================= 1일차 ================= -->
+  <div class="day-header">
+    <div class="d-label">DAY 1 · 화요일</div>
+    <div class="d-title">초량 — 피란민 산동네와 개항기 근대의 층</div>
+    <div class="d-sub">부산역 도착 · 점심부터 시작 · 숙박: 부산역 주변 · 1일차 작은 주제: "산비탈의 사람들은 무엇을 기다렸을까"</div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>출발점. 부산역 도착 후 첫 끼.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“역 맞은편, 사라진 창고 자리에서 코스 질문을 엽니다.” → 남선창고 터</span></div></div>
+    <div class="sch-place">점심 — 부산역 앞 초량 일대</div>
+    <div class="sch-sub">부산역 도착 후 첫 끼. 돼지국밥·밀면 등 부산 향토음식, 골목 단위로 현장 선택.</div>
+    <div class="sch-badges"><span class="sch-badge">1인 1~1.5만원 <span class="chk">[확인 필요]</span></span><span class="sch-badge">약 60분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'d1-lunch-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'d1-lunch-history')">📜 이야기</button>
+    </div>
+    <div id="d1-lunch-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 아재감성 — 첫 끼 리액션</div><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“부산역 앞 첫 끼는 가볍게. 저녁에 같은 동네에서 여섯 가지 맛을 다시 만납니다.”</span></div></div><div class="sc"><div class="sc-t">밀면은 냉면을 밀가루로 대신 만든 데서 왔다고 전한다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">상 위의 밀면 그릇</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이거 냉면이랑 뭐가 다를까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 냉면과 다른 점 맞히기(면 색·식감)</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">밀면은 구포국수·돼지국밥과 함께 6·25 전쟁을 전후해 생겨난 향토음식으로 알려져 있다. 피란민들이 함경도식 냉면을 밀가루로 대신 만들어 먹은 데서 비롯됐다고 전해진다.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“피란민이 만든 음식 이야기는 오늘 저녁 초량육미에서 이어집니다.”</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">저녁 초량육미와 겹치지 않게 가벼운 한 그릇. 특정 가게가 아니라 골목 단위.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag tr-yasa">야사·설</span><span class="sc-tag act">활동</span><span class="sc-tag">2-3 이미 아는 것과 연결</span><span class="sc-tag">2-15 보통 사람의 시선</span><span class="sc-tag">4-4 참여</span></div></div></div></div>
+    <div id="d1-lunch-history" class="detail-body"><div class="detail-inner">
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>돼지국밥은 정확한 기원은 알려져 있지 않으나, 자생적 향토음식이라기보다 한국전쟁과 피난이라는 시대적 배경 위에서 생겨난 음식이라는 설명이 설득력을 얻고 있다. 밀면은 구포국수·돼지국밥과 함께 6·25 전쟁을 전후해 생겨난 향토음식으로 알려져 있다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>밀면은 6·25 피란민들이 함경도식 냉면을 밀가루로 대신 만들어 먹은 데서 비롯됐다고 전해지며, 남구 우암동 '내호냉면'이 원조로 꼽힌다.</p></div>
+    </div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>부산역 맞은편. 코스의 출발점.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 찾기 미션형</span><span>“다음 건물은 붉은 벽돌입니다. 몇 층인지 세어 보세요.” → 옛 백제병원</span></div></div>
+    <div class="sch-place"><span class="layer-badge">개항의 층</span>남선창고 터 — 오프닝</div>
+    <div class="sch-sub">부산역 맞은편, 초량이바구길의 출발점. 1900년에 세워진 부산 최초의 대형 물류창고가 있던 자리.</div>
+    <div class="sch-badges"><span class="sch-badge">무료</span><span class="sch-badge">약 15분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'ib1-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib1-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib1-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib1-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="ib1-info" class="detail-body"><div class="detail-inner">
+      <table class="cost-table">
+        <tr><th>위치</th><td>부산 동구 초량로13번길 53 인근 (현재 마트 건물)</td></tr>
+        <tr><th>연혁</th><td>1900년 건립 → 2009년 철거</td></tr>
+        <tr><th>별칭</th><td>'명태고방'(명태 창고)</td></tr>
+        <tr><th>현재</th><td>창고 건물은 없고 붉은 벽돌 담장 일부만 남은 것으로 소개됨 <span><span class="chk">[확인 필요]</span></span></td></tr>
+      </table>
+    </div></div>
+    <div id="ib1-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 호기심 노출 — "창고는 어디 갔을까"</div><div class="qc"><div class="qc-k">질문 카드 · 첫 3분 오리엔테이션 (3-7)</div><div class="or-row"><span class="or-k">인사·소개</span><span>“안녕하세요, 여행바구니 가이드 고민수입니다. 오늘도 더 풍족하게 담아볼게요.”</span></div><div class="or-row"><span class="or-k">오늘의 질문</span><span>(부산역을 등지고 산 쪽을 가리키며) “부산역 앞 이 원도심은요, 밀어버리지 않고 그 위에 계속 쌓아 올린 동네입니다. 피란민 판잣집 밑에 일제강점기 건물이, 그 밑에 조선 시대 흔적이 있어요. <span class="mk">[천천히]</span> 이 땅 밑에는 몇 겹의 부산이 쌓여 있을까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="or-row"><span class="or-k">동선 예고</span><span>“사흘 동안 위층부터 한 층씩 걸어 내려갑니다. 차 없이, 걷고 지하철만 탑니다. 오래된 동네는 걸어야 보이거든요.”</span></div><div class="or-row"><span class="or-k">안전·규칙</span><span>“오늘은 산복도로라 계단과 경사가 많고, 1월이라 바닷바람이 셉니다.” (장애인 단체: 168계단은 옆 경사형 엘리베이터 '하늘길' 이용, 유치환의 우체통은 엘리베이터가 없고 출입구 단차가 있어 1층에서 진행 — 5-6)</span></div><div class="or-row"><span class="or-k">첫 참여</span><span>“부산역 와 보신 분? <span class="mk">[여기서 질문]</span> 역 바로 앞에 이런 산동네가 있는 줄 아셨어요?”</span></div><div class="qc-note">전체 질문 회수: 3일차 동래파전거리. 1일차 작은 질문("산비탈 사람들은 무엇을 기다렸을까")은 1일차 저녁 초량육미에서 회수.</div></div><div class="flow6"><div class="flow6-h">장소 흐름 — 6단계 (3-1)</div><table><tr><td class="n">1. 도입</td><td>“이 땅 밑에 몇 겹이 쌓여 있을까요?” <span class="mk">[여기서 질문]</span></td></tr><tr><td class="n">2. 사실</td><td>남선창고, 1900년 부산 최초의 대형 물류창고. '명태고방'. 2009년 철거.</td></tr><tr><td class="n">3. 예고</td><td>“오늘은 세 겹만 봅니다. 개항기 건물, 피란민 산동네, 항구 앞 골목.”</td></tr><tr><td class="n">4. 증거</td><td>남은 붉은 벽돌 담장(현존 확인 필요), 산비탈에 층층이 보이는 집들.</td></tr><tr><td class="n">5. 반박</td><td>“부산의 중심은 원래 여기?” — 초량도 조선 시대엔 동래도호부에 딸린 마을이었다.</td></tr><tr><td class="n">6. 마무리</td><td>1일차 작은 질문: “저 산비탈에서 매일 항구를 내려다보던 사람들은 뭘 기다렸을까요? 오늘 저녁에 답해 보겠습니다.”</td></tr></table><div class="ver"><span class="ver-k">30초</span><span>“부산역 앞 이 동네는 밀지 않고 쌓아 올린 동네입니다. 사흘 동안 위층부터 걸어 내려가, 가장 아래층을 찾아봅니다.”</span></div><div class="ver"><span class="ver-k">3분</span><span>첫 3분 → 도입 → 사실(창고 한 줄) → 마무리(1일차 작은 질문). 동래 복선은 한 문장.</span></div></div><div class="sc"><div class="sc-t">명태 창고였던 자리, 지금은 마트다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">창고 터의 현재 건물, 남은 붉은 벽돌 담장(현존 확인 후)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“여기 원래 뭐가 있었을까요? <span class="mk">[여기서 질문]</span> 부산 최초의 대형 창고. 명태가 하도 쌓여서 별명이 '명태고방'이었습니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 남은 흔적(벽돌 담장) 찾기<br>🎥 부산역을 등지고 산복도로 집들이 층층이 보이는 오프닝 앵글</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">남선창고는 1900년에 세워진, 배로 들어온 물품을 보관하던 부산 최초의 대형 물류창고다. 명태를 비롯한 물품을 보관해 '명태고방'으로도 불렸다. 2009년 철거됐다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 누가 세운 창고예요? → 설립 주체·규모는 1차 자료로 확인하지 못했다. 추측하지 않는다(3-9).</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“오늘 길에는 남은 것과 사라진 것이 섞여 있습니다.”</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-21 이름과 실제의 반전</span><span class="sc-tag">4-4 참여</span></div></div><div class="sc"><div class="sc-t">부산역 앞 초량도 조선 시대엔 동래도호부의 마을이었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">부산역 광장, 산 쪽 동네</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“지금은 여기가 부산의 얼굴이죠. 그런데 조선 시대 이 마을은 다른 고을에 딸려 있었습니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">조선 영조 16년(1740) 조사된 동래도호부 관할 행정구역에서 사천면 하단의 신초량·구초량 등 9개 리가 지금의 중구·서구·사하구에 해당한다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 그럼 원래 중심은 어디예요? → 마지막 날 직접 갑니다 — 여기서는 답하지 않고 복선으로 둔다(3-6).</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“그 고을, 마지막 날 지하철 타고 갑니다.”</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-5 통념 뒤집기</span><span class="sc-tag">2-12 한 장소, 여러 시대</span></div></div></div></div>
+    <div id="ib1-history" class="detail-body"><div class="detail-inner"><div class="guide-tip"><div class="guide-tip-label">가이드 포인트</div><p>코스 전체 질문(몇 겹?)과 1일차 작은 질문(무엇을 기다렸나)을 함께 여는 자리. 전체 질문은 3일차 동래에서, 작은 질문은 오늘 저녁에 닫는다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>남선창고는 1900년에 세워진, 배로 들어온 물품을 보관하던 부산 최초의 대형 물류창고다. 명태를 비롯한 물품을 보관해 '명태고방'이라는 별칭으로도 불렸다. 2009년 철거됐으며, 지금 이 자리는 초량이바구길의 시작점으로 통용된다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>1876년 강화도조약으로 부산이 개항한 뒤, 초량 앞바다(지금의 부산역·북항 일대)는 물자가 드나드는 항구 배후지가 됐다. 남선창고는 개항 이후 이 일대가 근대적 물류 기지로 바뀌어 간 흔적을 상징하는 건물이었다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>동해 북부에서 잡힌 명태가 배에 실려 부산으로 들어와 이 창고에 쌓였다가 전국으로 팔려 나갔다는 이야기가 이바구길 해설에서 자주 등장한다. 설립 주체·창고 규모 등 세부 연혁은 1차 자료로 확인하지 못했다 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+      <h4>초량 — 원래는 동래도호부의 마을</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>조선 영조 16년(1740) 조사된 동래도호부 관할 행정구역에서 사천면 하단의 신초량·구초량 등 9개 리가 지금의 중구·서구·사하구에 해당한다. 지금 서 있는 초량도 조선 시대에는 동래도호부에 딸린 마을이었다 — 3일차 동래에서 회수할 복선으로만 짧게 둔다.</p></div>
+    </div></div>
+    <div id="ib1-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>부산역 광장을 등지고 산 쪽을 바라보는 오프닝 스탠딩 컷 (산복도로 집들이 층층이 보이는 앵글 — '겹'을 시각으로)</li>
+      <li>부산역 앞 횡단보도를 건너는 컷</li>
+      <li>남은 붉은 벽돌 담장 클로즈업 (현존 확인 후)</li>
+    </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>부산역 광장을 등지고 산 쪽을 보면 산복도로 집들이 층층이 — 코스 주제 "겹"이 한 장에</li></ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>남선창고 터에서 걸어서. 첫 번째로 만나는 근대의 층.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“다음 담장에서 두 사람의 이름을 찾아 두세요. 오늘 산 위에서 다시 만납니다.” → 담장갤러리</span></div></div>
+    <div class="sch-place"><span class="layer-badge">근대의 층</span>★ 옛 백제병원</div>
+    <div class="sch-sub">남선창고 터에서 도보 이동. 조선인이 세운 부산 최초의 근대식 개인종합병원. 국가등록문화유산.</div>
+    <div class="sch-badges"><span class="sch-badge">외관 무료 · 내부 카페</span><span class="sch-badge">약 20분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'ib2-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib2-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib2-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib2-shot')">🎬 촬영·팁</button>
+    <button class="detail-btn" onclick="toggleDetail(this,'ib2-roman')">🌙 낭만</button></div>
+    <div id="ib2-info" class="detail-body"><div class="detail-inner">
+      <table class="cost-table">
+        <tr><th>위치</th><td>부산 동구 중앙대로209번길 16</td></tr>
+        <tr><th>개원</th><td>1922년 백제의원 개원 (자료에 따라 1921년 표기도 있음 ⚠️)</td></tr>
+        <tr><th>건물</th><td>1927년 붉은 벽돌 건물 준공 (원래 5층, 1972년 화재 후 5층 철거)</td></tr>
+        <tr><th>지정</th><td>국가등록문화유산 제647호 '부산 구 백제병원' (지정 연도 <span><span class="chk">[확인 필요]</span></span>)</td></tr>
+        <tr><th>현재</th><td>1층 카페(브라운핸즈 백제) 등. 층별 입점 현황 변동 가능 <span><span class="chk">[확인 필요]</span></span></td></tr>
+      </table>
+    </div></div>
+    <div id="ib2-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 세심함 — 목조 계단·창틀 디테일</div><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“붉은 벽돌 건물 하나가 병원, 중국요릿집, 일본군 숙소, 대사관, 예식장, 카페까지 — 원도심의 겹을 축소판으로 보여줍니다.”</span></div></div><div class="sc"><div class="sc-t">건물 하나가 여덟 번 옷을 갈아입었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">붉은 벽돌 외관, 1층 카페의 옛 목조 계단</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이 건물, 몇 번 주인이 바뀌었을까요? <span class="mk">[여기서 질문]</span> 손가락으로 같이 세어 봅시다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 용도 바뀐 횟수 손가락으로 세기<br>🎥 용도 나열 때 창틀·벽돌 인서트 빠른 컷 전환</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">1922년 백제의원(조선인이 세운 부산 최초의 근대식 개인종합병원) → 1932년 폐원 → 청요릿집 '봉래각'(1933) → 일본군 장교 숙소 → 해방 후 부산 치안사령부 → 중화민국 임시대사관 → 예식장·롤러스케이트장·당구장 → 지금의 카페.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 병원은 왜 10년 만에 닫았어요? → 빚과 인체 표본 문제 등으로 접었다는 이야기가 소개 자료에 실려 있으나 1차 자료로 확정하지 못했다(야사·설로).<br>Q. 왜 중국요릿집이 됐어요? → 이 동네 화교 이야기 — 오늘 밤 차이나타운에서.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“이 건물을 산 중국인 사업가의 동네, 오늘 밤에 갑니다.”</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-14 유물이 겪은 운명</span><span class="sc-tag">4-4 참여</span><span class="sc-tag">4-5 시각 보조</span></div></div><div class="sc"><div class="sc-t">지금은 4층, 원래는 5층이었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">건물 윗선(길 건너 로우앵글)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“몇 층인지 세어 보셨어요? <span class="mk">[여기서 질문]</span> 원래는 한 층이 더 있었습니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 층수 세기<br>🎥 길 건너 로우앵글로 '사라진 5층' 윗선까지</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">1927년 붉은 벽돌 건물로 지어졌고, 1972년 화재 피해로 5층이 철거 명령을 받고 헐렸다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-14 유물이 겪은 운명</span><span class="sc-tag">4-4 참여</span></div></div></div></div>
+    <div id="ib2-history" class="detail-body"><div class="detail-inner">
+      <h4>병원 시절 (1922~1932)</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>일본 오카야마의학전문학교를 졸업한 최용해가 1922년 백제의원을 열었다. 조선인이 세운 부산 최초의 근대식 개인종합병원으로 꼽힌다. 1927년 붉은 벽돌의 서양식 건물을 지어 병원을 키웠는데, 단층~2·3층 건물이 대부분이던 당시 초량에서 눈에 띄는 규모였다. 병원은 1932년 문을 닫았다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>설립자 최용해가 건물 신축 과정에서 무리하게 빚을 진 데다, 행려병자의 시신으로 인체 표본을 만들어 보관한 일이 문제가 되면서 병원을 접고 일본으로 떠났다는 이야기가 여러 소개 자료에 실려 있다. 폐원 경위를 확정할 1차 자료는 확인하지 못했다 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+      <h4>병원 이후 — 용도 변천</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>폐원 후 건물은 동양척식주식회사를 거쳐 1933년 중국인 사업가 양모민에게 넘어가 청요릿집 '봉래각'이 됐다. 1942년 중일전쟁 여파로 주인이 귀국하며 문을 닫은 뒤에는 일본군 장교 숙소(아카츠키 부대)로 쓰였다. 해방 후에는 부산 치안사령부, 이어 중화민국 임시대사관이 들어섰고, 이후 민간에 넘어가 예식장·롤러스케이트장·당구장 등으로 쓰였다. 1972년 화재로 피해를 입어 5층이 철거 명령을 받고 헐렸다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>지금은 1층 카페 '브라운핸즈 백제'를 중심으로 공간 재생 사례가 됐다. 옛 병원의 벽돌·목조 계단·창틀 등 원형 요소를 최대한 살린 것이 특징이다.</p></div>
+    </div></div>
+    <div id="ib2-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>붉은 벽돌 외관 전경 — 길 건너편 로우앵글로 '사라진 5층' 윗선까지</li>
+      <li>카페 내부 옛 병원 목조 계단·창틀 클로즈업</li>
+      <li>용도 변천을 나열할 때 창틀·벽돌 인서트 빠른 컷 전환</li>
+    </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>길 건너편에서 낮게 — 사라진 5층 자리까지 하늘을 남기고</li></ul></div><div class="tip-sec"><h5>💰 비용 팁</h5><ul><li>1층이 카페라 음료를 주문하면 옛 병원 내부를 보며 쉴 수 있다(층별 입점은 변동 가능)</li></ul></div></div></div><div id="ib2-roman" class="detail-body"><div class="detail-inner"><div class="roman-card"><span class="rc-type">소비형</span><table><tr><th>언제</th><td>오후, 1층 카페</td></tr><tr><th>무엇을</th><td>옛 병원 창가에서 커피 한 잔</td></tr><tr><th>찍는 법</th><td>창틀 너머 거리, 잔 위 김 — 대사 없이</td></tr></table></div><div class="notice-inline">낭만 장면은 설명·나레이션 없이 행동과 분위기로만 전달한다(현장음·BGM). 효율보다 "굳이 해 보는 것"이 포인트.</div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>백제병원에서 걸어서. 산 위에서 회수할 이름을 미리 찾는다(3-6).</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 찾기 미션형</span><span>“다음 계단, 몇 개인지 세면서 올라갑니다.” → 168계단</span></div></div>
+    <div class="sch-place">담장갤러리 · 동구 인물사 담장 · 초량교회</div>
+    <div class="sch-sub">백제병원에서 도보 이동. 초량초등학교 옆 담장의 벽화·사진·시, 그리고 이 동네 인물들.</div>
+    <div class="sch-badges"><span class="sch-badge">무료</span><span class="sch-badge">약 15분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'ib3-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib3-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib3-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib3-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="ib3-info" class="detail-body"><div class="detail-inner">
+      <table class="cost-table">
+        <tr><th>위치</th><td>초량초등학교 담장 일대</td></tr>
+        <tr><th>내용</th><td>부산항 개항부터 피란민의 삶까지를 표현한 담장갤러리 + 동구 관련 인물 소개 담장</td></tr>
+        <tr><th>초량교회</th><td>담장 인근. 교회 역사관 2011년 개관</td></tr>
+      </table>
+    </div></div>
+    <div id="ib3-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 세심함 — 담장 속 이름 찾기</div><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“담장 속 이름 두 개, 장기려와 유치환. 오늘 저 산 위에서 다시 만납니다.”</span></div></div><div class="sc"><div class="sc-t">담장 속 두 이름을 오늘 산 위에서 다시 만난다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">인물사 담장의 장기려·유치환 이름</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이 담장에서 의사 한 명, 시인 한 명 찾아보세요. <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 담장에서 두 이름 찾기<br>🎥 이름 클로즈업(복선 인서트)</span></div><div class="sc-row"><span class="sc-k">대체안</span><span class="sc-alt" style="flex:1">이동이 어려운 참가자에게는 가이드가 이름 앞에서 크게 읽어 준다(5-6).</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">초량초등학교 옆 담장에 부산항 개항부터 피란민의 삶까지를 표현한 담장갤러리가 있고, 이어지는 인물사 담장에 동구에서 활동한 인물들이 소개돼 있다. 의사 장기려와 시인 유치환이 대표적이다.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“벽화 속 판잣집 그림, 이제 그 동네로 직접 올라갑니다.”</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-4 바로 여기의 현장성</span><span class="sc-tag">4-4 참여</span></div></div><div class="sc"><div class="sc-t">'한강 이남 최초의 교회'로 불리는 교회가 담장 옆에 있다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">초량교회 외관</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“담장 옆 이 교회, 교단에서는 한강 이남 최초의 교회라고 소개합니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">미국 북장로교 선교사 윌리엄 베어드(배위량)가 세운 교회로, 교단 측은 '한강 이남 최초의 교회'로 소개한다. 설립 연도는 1891년·1892년으로 갈린다 ⚠️. 일제강점기 영남 지역 독립운동 거점이었고, 백산상회를 통한 임시정부 지원에도 연결돼 있었다.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“백산상회, 내일 남포동에서 그 자리에 갑니다.”</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">"최초"는 교단 측 설명임을 밝힌다(2-16 비교 기준).</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-16 최초·최대·유일</span><span class="sc-tag">2-12 한 장소, 여러 시대</span></div></div></div></div>
+    <div id="ib3-history" class="detail-body"><div class="detail-inner">
+      <h4>담장갤러리와 인물사 담장</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>초량초등학교 옆 담장에 부산항 개항부터 피란민의 삶까지 부산의 역사를 벽화·사진·시로 표현한 '담장갤러리'가 조성돼 있다. 이어지는 인물사 담장에는 동구에서 활동한 인물들이 소개돼 있으며, 의사 장기려와 시인 유치환이 대표적이다. 소개된 인물 전체 구성은 현장 확인이 필요하다 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+      <h4>초량교회 — 한강 이남 최초의 교회</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>초량교회는 미국 북장로교 선교사 윌리엄 베어드(배위량)가 세운 교회로, 교단 측은 '한강 이남 최초의 교회'로 소개한다. 설립 연도는 자료에 따라 1891년과 1892년으로 갈린다 ⚠️.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>일제강점기 초량교회는 영남 지역 독립운동의 거점 역할을 했다. 교인들이 3·1운동에 참여했고, 백산상회(백산 안희제)를 통한 임시정부 지원에도 연결돼 있었다. 주기철 목사 등 이 교회를 거친 교역자들이 신사참배 반대로 옥고를 치르거나 순교했다. 한국전쟁기에는 피란민을 돌보며 기도운동을 조직적으로 벌였다. 2011년 교회 역사관을 열었다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>피란수도 시절 이승만 대통령이 이 교회에서 예배를 드렸다는 이야기가 전해진다. 1차 자료로는 확인하지 못했다 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+    </div></div>
+    <div id="ib3-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>담장 벽화를 따라 걷는 트래킹 컷</li>
+      <li>인물 담장의 장기려·유치환 이름 클로즈업 (복선 인서트)</li>
+      <li>초량교회 외관</li>
+    </ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>담장 벽화 속 판잣집 동네로 직접 올라간다.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“계단 중간에서 옆으로 빠지면 바다가 보이는 쉼터가 있습니다. 거기서 오늘의 단어가 나옵니다.” → 김민부전망대</span></div></div>
+    <div class="sch-place"><span class="layer-badge">피란의 층</span>★ 168계단</div>
+    <div class="sch-sub">담장갤러리에서 도보 이동. 아랫동네와 윗동네를 잇던 가파른 계단. 옆으로 경사형 엘리베이터 '하늘길'.</div>
+    <div class="sch-badges"><span class="sch-badge">무료</span><span class="sch-badge">약 15분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'ib4-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib4-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib4-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib4-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="ib4-info" class="detail-body"><div class="detail-inner">
+      <table class="cost-table">
+        <tr><th>위치</th><td>부산 동구 영초길191번길 8-1 일원</td></tr>
+        <tr><th>규모</th><td>계단 168개, 경사 약 45도로 소개됨 (길이 <span><span class="chk">[확인 필요]</span></span>)</td></tr>
+        <tr><th>하늘길</th><td>12인승 경사형 엘리베이터. 2025년 3월 11일 운행 시작, 무료. 2016년 설치된 모노레일을 대체</td></tr>
+        <tr><th>운영시간</th><td>07:00~20:00로 소개됨, 계단은 상시 통행 <span><span class="chk">[확인 필요]</span></span></td></tr>
+      </table>
+    </div></div>
+    <div id="ib4-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 자조 · 메타개그 — 계단에서 숨찬 모습 그대로</div><div class="flow6"><div class="flow6-h">장소 흐름 — 6단계 (3-1)</div><table><tr><td class="n">1. 도입</td><td>“이 계단, 몇 개일까요? <span class="mk">[여기서 질문]</span> 세면서 올라갑시다.”</td></tr><tr><td class="n">2. 사실</td><td>피란민이 산기슭에 동네를 만들고, 이 계단으로 아래 우물 물을 길어 오르내렸다.</td></tr><tr><td class="n">3. 예고</td><td>“두 가지만 봅니다. 계단, 그리고 옆의 빨간 엘리베이터.”</td></tr><tr><td class="n">4. 증거</td><td>직접 오르는 숨소리(오감), 중턱에서 내려다본 부산항.</td></tr><tr><td class="n">5. 반박</td><td>“엘리베이터는 원래 있었다?” — 2016년 모노레일, 2025년 엘리베이터. 같은 자리에 70년이 겹쳐 있다.</td></tr><tr><td class="n">6. 마무리</td><td>“이 계단이 윗동네 사람들의 유일한 길이었습니다. 여기서부터가 피란의 층입니다.”</td></tr></table><div class="ver"><span class="ver-k">30초</span><span>“168개 계단, 피란민들이 물을 이고 오르던 길입니다. 옆의 빨간 엘리베이터는 2025년에 생겼어요. 같은 자리에 70년이 겹쳐 있습니다.”</span></div><div class="ver"><span class="ver-k">3분</span><span>도입(계단 세기) → 사실 → 반박(엘리베이터) → 마무리. 오르는 동안은 숨소리 위주.</span></div></div><div class="sc"><div class="sc-t">168개 — 물동이를 이고 오르던 계단.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">계단, 중턱에서 내려다보는 부산항</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“숨차시죠? <span class="mk">[여기서 질문]</span> 피란민들은 이 계단 아래 우물에서 물을 길어 이고 올라갔습니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 계단 수 세며 오르기<br>🎥 계단 아래 로우앵글 → 중턱에서 뒤돌아 부산항</span></div><div class="sc-row"><span class="sc-k">대체안</span><span class="sc-alt" style="flex:1">계단이 어려운 참가자는 옆 경사형 엘리베이터 '하늘길'(12인승, 무료)을 타고, 탑승 중 같은 이야기를 듣는다(5-6).</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">168계단은 초량동 산비탈 윗동네와 아랫동네를 잇는 길이었다. 한국전쟁 때 피란민들이 산기슭에 집을 지으며 산동네가 형성됐고, 주민들은 이 계단으로 아래쪽 우물의 물을 길어 나르고 부두와 시장의 일터로 오르내렸다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-1 몸의 공통 경험</span><span class="sc-tag">2-15 보통 사람의 시선</span><span class="sc-tag">4-1 묘사</span><span class="sc-tag">4-4 참여</span></div></div><div class="sc"><div class="sc-t">계단 옆 빨간 엘리베이터는 세계 대회 1위를 했다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">빨간 경사형 엘리베이터 '하늘길'</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이 엘리베이터, 2025년에 생겼는데 세계 1위를 했답니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">🎥 엘리베이터와 계단을 한 프레임에</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">2016년 모노레일이 설치됐으나 잦은 고장으로 2025년 3월 11일부터 12인승 경사형 엘리베이터 '초량168계단 하늘길'로 교체돼 무료로 운행한다. 2025년 12월 엘리베이터 전문 매체 '엘리베이터 월드' 주관 세계 경사형 엘리베이터 콘테스트에서 1위로 선정됐다고 보도됐다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-23 변화와 개선</span><span class="sc-tag">2-16 최초·최대·유일</span><span class="sc-tag">2-12 한 장소, 여러 시대</span></div></div></div></div>
+    <div id="ib4-history" class="detail-body"><div class="detail-inner"><div class="guide-tip"><div class="guide-tip-label">가이드 포인트</div><p>피란의 층이 시작되는 곳. 말보다 몸 — 오르는 동안은 숨소리를 담고, 설명은 중턱에서 멈춰 짧게.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>168계단은 초량동 산비탈 윗동네와 아랫동네를 잇는 길이었다. 한국전쟁 때 피란민들이 산기슭에 집을 지으며 산동네가 형성됐고, 주민들은 이 계단으로 아래쪽 우물의 물을 길어 나르고 부두와 시장의 일터로 오르내렸다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>가파른 경사로 오르내리기 힘든 주민을 위해 2016년 모노레일이 설치됐다. 잦은 고장 문제로 2025년 3월 11일부터 12인승 경사형 엘리베이터 '초량168계단 하늘길'로 교체돼 무료로 운행한다. 같은 시기 인근에 '이바구플랫폼'도 함께 문을 열었다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>2025년 12월, 하늘길은 엘리베이터 전문 매체 '엘리베이터 월드'가 주관한 세계 경사형 엘리베이터 콘테스트에서 1위로 선정됐다고 보도됐다.</p></div>
+    </div></div>
+    <div id="ib4-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>계단 아래에서 올려다보는 로우앵글 — 경사감</li>
+      <li>계단 중턱에서 뒤돌아 부산항을 내려다보는 컷</li>
+      <li>빨간 경사형 엘리베이터와 계단을 한 프레임에</li>
+    </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>계단 중턱에서 뒤돌아 부산항을 — 계단 난간을 화면 아래에 걸면 경사가 보인다</li></ul></div><div class="tip-sec"><h5>🚗 이동 팁</h5><ul><li>경사형 엘리베이터 '하늘길' 무료(07:00~20:00로 소개), 계단은 상시 — 오를 땐 엘리베이터, 내려올 땐 계단도 방법</li></ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>168계단 중간에서 옆으로. 오르막 뒤의 쉼표.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 찾기 미션형</span><span>“다음 장소엔 이 동네 옛 사진이 있습니다. 방금 지나온 골목을 찾아보세요.” → 이바구공작소</span></div></div>
+    <div class="sch-place">김민부전망대</div>
+    <div class="sch-sub">168계단 중간에서 옆으로. 가곡 '기다리는 마음'의 시인 김민부를 기리는 부산항 전망대.</div>
+    <div class="sch-badges"><span class="sch-badge">무료</span><span class="sch-badge">약 10분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'ib5-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib5-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib5-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib5-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="ib5-info" class="detail-body"><div class="detail-inner">
+      <table class="cost-table">
+        <tr><th>위치</th><td>168계단 중간에서 오른쪽으로 빠지는 지점</td></tr>
+        <tr><th>특징</th><td>부산항·산복도로 조망. 벽면에 가곡 '기다리는 마음' 가사가 새겨져 있음</td></tr>
+      </table>
+    </div></div>
+    <div id="ib5-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 소녀감성 — 바다 쪽 시선</div><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“숨 고르는 자리. 음악 교과서 속 가곡 '기다리는 마음'을 쓴 시인이 이 동네에서 태어났습니다. 오늘의 단어는 '기다림'.”</span></div></div><div class="sc"><div class="sc-t">음악 교과서 속 '기다리는 마음'의 시인이 이 동네에서 태어났다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">가사가 새겨진 전망대 벽</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“'기다리는 마음', 학교에서 배우신 분? <span class="mk">[여기서 질문]</span> 그 가사를 쓴 시인이 바로 이 동네 출신입니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 노래 아는 사람 손들기<br>🎥 가사 벽 클로즈업 → 바다로 포커스 이동</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">김민부(1941~1972, 본명 김병석)는 부산 동구 수정동에서 태어났다. 가곡 '기다리는 마음'은 김민부가 가사를 쓰고 장일남이 곡을 붙였으며, 떠난 임을 바닷가에서 기다리는 마음을 노래한다. 고등학교 음악 교과서에도 실렸다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 곡이 먼저예요, 가사가 먼저예요? → 작곡가 장일남의 1987년 회고에 따르면 곡이 먼저였고 김민부가 가사를 다듬었다고 한다 — 한 사람의 회고(야사·설로).</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“오늘 산 위에서 만날 사람들, 모두 무언가를 기다린 사람들입니다.”</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">가사를 자막·멘트로 옮겨 적지 않는다. "벽에 새겨져 있다"까지만.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-3 이미 아는 것과 연결</span><span class="sc-tag">2-4 바로 여기의 현장성</span><span class="sc-tag">4-4 참여</span></div></div><div class="sc"><div class="sc-t">난간을 프레임 아래에 걸치면 높이가 산다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">전망대 난간과 부산항</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“사진 팁 하나. 사람보다 항구를 크게, 난간을 아래쪽에 걸쳐 보세요.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 같은 구도로 한 장씩 찍어 보기</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">내일 아침 갈 북항이 이 아래에 보인다.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“내일 아침엔 저 바닷가로 내려갑니다.”</span></div><div class="sc-tags"><span class="sc-tag tr-field">현장 확인</span><span class="sc-tag act">활동</span><span class="sc-tag">2-24 보는 자리</span><span class="sc-tag">4-4 참여</span></div></div></div></div>
+    <div id="ib5-history" class="detail-body"><div class="detail-inner">
+      <h4>'부산의 천재 시인' 김민부</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>김민부(1941~1972)의 본명은 김병석으로, 부산 동구 수정동에서 태어났다. 고등학교 1학년 때 동아일보 신춘문예에 입선했고, 1956년 첫 시집 『항아리』를 냈다. 1962년 부산문화방송에 입사해 라디오 프로그램 '자갈치 아지매'를 기획·집필했고, 이후 서울에서 방송작가로 활동하다 1972년 화재 사고로 31세에 세상을 떠났다.</p></div>
+      <h4>가곡 '기다리는 마음'</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>'기다리는 마음'은 김민부가 가사를 쓰고 장일남이 곡을 붙인 가곡으로, 떠난 임을 바닷가에서 하염없이 기다리는 마음을 노래한다. 고등학교 음악 교과서에도 실렸다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>작곡가 장일남의 1987년 회고에 따르면, 그는 한국전쟁 무렵 연평도에서 제주 방언으로 된 옛 글을 보고 먼저 곡을 붙였고, 이후 1968~69년 무렵 문화방송에서 함께 일하던 김민부가 이를 표준어 가사로 다듬었다고 한다. 작곡가 한 사람의 회고에 기댄 이야기다.</p></div>
+    </div></div>
+    <div id="ib5-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>부산항·북항대교 조망 파노라마 (좌→우 팬)</li>
+      <li>가사가 새겨진 벽 클로즈업 → 바다로 포커스 이동</li>
+    </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>좌→우 천천히 팬, 북항대교가 프레임 오른쪽 3분의 1에 오게</li></ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>김민부전망대에서 산복도로 따라. 기다림의 동네를 사진으로 본다.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“담장에서 찾은 첫 번째 이름, 의사를 만나러 갑니다.” → 장기려 더나눔</span></div></div>
+    <div class="sch-place">이바구공작소</div>
+    <div class="sch-sub">김민부전망대에서 산복도로 방향 도보 이동. 산복도로 사람들의 사진과 이야기를 모은 자료관.</div>
+    <div class="sch-badges"><span class="sch-badge">입장료 <span class="chk">[확인 필요]</span></span><span class="sch-badge">약 15분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'ib6-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib6-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib6-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib6-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="ib6-info" class="detail-body"><div class="detail-inner">
+      <table class="cost-table">
+        <tr><th>위치</th><td>부산 동구 망양로486번길 14-13</td></tr>
+        <tr><th>구성</th><td>1층 옛 교복 대여·사진 촬영 / 2층 산복도로 조망 큰 창 + 주민 사진·이야기 전시</td></tr>
+        <tr><th>운영</th><td>운영시간·휴관일·입장료 <span><span class="chk">[확인 필요]</span></span></td></tr>
+      </table>
+    </div></div>
+    <div id="ib6-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 참여유도 — 옛 교복 입어 보기</div><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“방금 올라온 그 골목의 옛 모습이 여기 사진에 있습니다. 산복도로 — 산의 배를 지나는 길이라는 뜻이에요.”</span></div></div><div class="sc"><div class="sc-t">방금 지나온 골목의 옛 얼굴이 사진 속에 있다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">전시된 옛 사진, 2층 큰 창 너머 지붕들</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이 사진, 어디 같아요? <span class="mk">[여기서 질문]</span> 방금 올라온 그 계단입니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 옛 사진과 같은 장소 찾기<br>🎥 옛 사진 클로즈업 → 같은 앵글의 현재 풍경 매치컷<br>👥 1층 옛 교복 입어 보기 — 무거운 이야기 사이 쉼표(4-10)</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">이바구공작소는 피란민이 산비탈에 정착해 동네를 이룬 과정과 주민들의 일상을 사진·기록으로 보여준다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-22 추리하기</span><span class="sc-tag">4-5 시각 보조</span><span class="sc-tag">4-4 참여</span></div></div><div class="sc"><div class="sc-t">'산복도로'는 산의 배(腹)를 지나는 길이다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">창밖 산 중턱을 가로지르는 도로</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“산복도로, 산 산(山)에 배 복(腹). 산의 배, 중턱을 지나는 길입니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">한국전쟁 때 부산으로 몰려든 피란민들은 평지에 자리를 잡지 못하고 산비탈에 천막과 판잣집을 지었다. 이 산동네들을 잇는 산 중턱(山腹)의 도로가 '산복도로'다.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“이 집들 하나하나가 누군가의 '잠깐만 살 집'이었습니다. 돌아갈 날을 기다리면서요.”</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-21 이름과 실제의 반전</span><span class="sc-tag">4-8 한자 풀이</span><span class="sc-tag">2-15 보통 사람의 시선</span></div></div></div></div>
+    <div id="ib6-history" class="detail-body"><div class="detail-inner">
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>한국전쟁 때 부산으로 몰려든 피란민들은 평지에 자리를 잡지 못하고 산비탈에 천막과 판잣집을 지었다. 이 산동네들을 잇는 산 중턱(山腹)의 도로가 '산복도로'다. 이바구공작소는 피란민이 산비탈에 정착해 동네를 이룬 과정과 그 뒤 주민들의 일상을 사진·기록으로 보여준다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>이바구공작소 가는 길에 마을의 수호신을 모시는 당산이 있다고 소개된다. 유래와 현재 상태는 현장 확인이 필요하다 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+    </div></div>
+    <div id="ib6-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>옛 사진 클로즈업 → 같은 앵글의 현재 풍경 매치컷</li>
+      <li>2층 큰 창 너머 산복도로 지붕 풍경</li>
+    </ul></div><div class="tip-sec"><h5>💰 비용 팁</h5><ul><li>운영시간·입장료 [확인 필요]</li></ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>담장에서 이름만 스쳐간 첫 번째 사람을 회수한다(3-6).</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“이번엔 우리가 직접 기다림을 만들어 봅니다. 엽서 한 장 쓸 준비 하세요.” → 유치환의 우체통</span></div></div>
+    <div class="sch-place">★ 장기려 더나눔</div>
+    <div class="sch-sub">이바구공작소에서 도보 이동. '한국의 슈바이처' 장기려를 기리는 기념관 겸 주민 복합공간.</div>
+    <div class="sch-badges"><span class="sch-badge">입장료 <span class="chk">[확인 필요]</span></span><span class="sch-badge">약 20분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'ib7-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib7-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib7-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib7-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="ib7-info" class="detail-body"><div class="detail-inner">
+      <table class="cost-table">
+        <tr><th>위치</th><td>초량이바구길 산복도로 구간 — 정확한 주소 <span><span class="chk">[확인 필요]</span></span></td></tr>
+        <tr><th>구성</th><td>1층 어린이 작은도서관·마을 공간 / 2층 장기려기념관·마음나눔방·건강나눔방</td></tr>
+        <tr><th>운영</th><td>운영시간·휴관일 <span><span class="chk">[확인 필요]</span></span></td></tr>
+      </table>
+    </div></div>
+    <div id="ib7-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 아빠감성 — 의사의 삶을 진중하게</div><div class="flow6"><div class="flow6-h">장소 흐름 — 6단계 (3-1)</div><table><tr><td class="n">1. 도입</td><td>“아까 담장에서 찾은 의사 이름, 기억나세요?” <span class="mk">[여기서 질문]</span></td></tr><tr><td class="n">2. 사실</td><td>1911년 평북 용천 출생. 1950년 12월 둘째 아들만 데리고 월남. 1951년 복음병원, 1968년 청십자의료보험조합.</td></tr><tr><td class="n">3. 예고</td><td>“두 가지만 봅니다. 의사 장기려, 그리고 남편 장기려.”</td></tr><tr><td class="n">4. 증거</td><td>기념관 전시 유품, 아내 편지의 첫 문장.</td></tr><tr><td class="n">5. 반박</td><td>“기회가 있었는데 왜 안 만나러 갔을까?” — 1985년 특혜 방북 제안을 스스로 거절.</td></tr><tr><td class="n">6. 마무리</td><td><span class="mk">[천천히]</span> 끝내 만나지 못함 → 2000년 아들이 평양에서 50년 만에 어머니를 만나 아버지 소식을 전함.</td></tr></table><div class="ver"><span class="ver-k">30초</span><span>“한국 최초 민간 의료보험을 만든 의사. 그리고 북에 두고 온 아내를 평생 기다린 남편. 특혜로는 가지 않겠다며 방북 제안도 거절했습니다.”</span></div><div class="ver"><span class="ver-k">3분</span><span>도입(담장 이름) → 사실(의사) → 반박(거절) → 마무리(편지·아들). 담담하게.</span></div></div><div class="sc"><div class="sc-t">한국 최초의 민간 의료보험을 만든 사람이 이 의사다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">기념관 전시</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“병원 가실 때 건강보험증 쓰시죠? <span class="mk">[여기서 질문]</span> 민간 의료보험을 이 나라에서 처음 만든 사람입니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">장기려는 1951년 1월 부산에서 복음병원(현 고신대학교복음병원)을 시작해 피란민과 가난한 환자들을 돌봤다. 1968년 5월 한국 최초의 민간 의료보험조합인 청십자의료보험조합을 세웠다. 1979년 막사이사이상을 받았다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 지금 건강보험이 이걸로 시작된 거예요? → "최초의 민간 의료보험조합"까지만 말한다. 현재 제도와의 연결은 확인하지 않았다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-16 최초·최대·유일</span><span class="sc-tag">2-17 나와 연결</span><span class="sc-tag">2-3 이미 아는 것과 연결</span></div></div><div class="sc"><div class="sc-t">가족을 만날 기회를, 그는 스스로 거절했다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">기념관의 가족 관련 전시(현장 확인)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“정부가 북에 가서 가족을 만나게 해 주겠다고 합니다. 여러분이라면? <span class="mk">[여기서 질문]</span> <span class="mk">[침묵]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 "나라면 간다 / 안 간다" 짧은 손들기</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">장기려는 1950년 12월 둘째 아들 장가용만 데리고 월남했고 아내와 다른 자녀들은 북에 남았다. 재혼하지 않았고, 1985년 정부의 북한 방문 제안을 특혜를 누리면서까지 다녀오고 싶지 않다며 거절했다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-6 인물의 감정·동기</span><span class="sc-tag">4-9 딜레마 이입</span></div></div><div class="sc"><div class="sc-t">아내의 편지 첫 문장은 "기도 속에 언제나 당신을 만나고 있습니다"였다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">전시 앞, 창밖 부산항</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“1991년, 아내가 살아 있다는 소식을 듣고 편지를 주고받습니다. 아내 편지의 첫 문장. <span class="mk">[천천히]</span> '기도 속에 언제나 당신을 만나고 있습니다.' <span class="mk">[침묵]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">🎥 인물 클로즈업 + 창밖 부산항 인서트</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">1991년 미국의 조카를 통해 편지를 주고받았다. 장기려는 끝내 아내를 만나지 못했고, 2000년 8월 이산가족 상봉 때 아들 장가용이 평양에서 50년 만에 어머니를 만나 아버지의 소식을 전했다. 장기려는 1995년 12월 25일 세상을 떠났다.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“오늘 산 위의 사람들은 모두 무언가를 기다렸습니다. 마지막 한 사람, 시인을 만나러 갑니다.”</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">감정을 과장하지 않는다. 담담하게, 침묵을 길지 않게.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-6 인물의 감정·동기</span><span class="sc-tag">4-3 언어 리듬·타이밍</span></div></div><details class="spare"><summary>예비 카드 1장 — 시간·반응 보고 골라 쓰기</summary><div class="sc"><div class="sc-t">한국 최초 민간 의료보험을 만든 의사는 평생 자기 집이 없었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">기념관 전시</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이분, 집이 몇 채였을까요? <span class="mk">[여기서 질문]</span> 한 채도 없었습니다. 말년엔 병원 건물 꼭대기층 10평 남짓한 방에서 살았어요.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 집이 몇 채였을지 맞히기</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">월남 후 자기 집 없이 병원 사택에서 지냈고, 말년엔 고신의료원 꼭대기층 10여 평 공간에서 살았다. 80세가 넘어서도 하루 40여 명을 무료 진료했다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-7 의외의 인간미</span><span class="sc-tag">2-6 인물의 감정·동기</span><span class="sc-tag">4-2 숫자 체감</span><span class="sc-tag">4-4 참여</span></div></div></details></div></div>
+    <div id="ib7-history" class="detail-body"><div class="detail-inner"><div class="guide-tip"><div class="guide-tip-label">가이드 포인트</div><p>1일차에서 감정이 가장 실리는 자리. 바로 다음(우체통)은 엽서 쓰기 체험으로 톤을 올린다(3-5).</p></div>
+      <h4>의사 장기려 (1911~1995)</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>장기려는 1911년 평안북도 용천에서 태어났다. 1950년 12월 한국전쟁의 혼란 속에 둘째 아들 장가용만 데리고 월남했고, 아내와 다른 자녀들은 북에 남았다. 1951년 1월 부산에서 복음병원(현 고신대학교복음병원)을 시작해 피란민과 가난한 환자들을 돌봤다. 1968년 5월 한국 최초의 민간 의료보험조합인 청십자의료보험조합을 세웠다. 1979년 막사이사이상을 받았고, 1995년 12월 25일 세상을 떠났다.</p></div>
+      <h4>평생의 기다림</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>장기려는 북에 두고 온 아내 김봉숙을 기다리며 재혼하지 않았다. 1985년 정부로부터 북한 방문 제안을 받았으나 특혜를 누리면서까지 다녀오고 싶지 않다며 거절했다. 1991년 아내와 자녀들이 살아 있다는 소식을 듣고 미국의 조카를 통해 편지를 주고받았다. 아내가 보낸 편지의 첫 문장은 "기도 속에 언제나 당신을 만나고 있습니다"였다. 장기려는 끝내 아내를 만나지 못했고, 2000년 8월 이산가족 상봉 때 아들 장가용이 평양에서 50년 만에 어머니를 만나 아버지의 소식을 전했다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>장기려와 초량동의 직접적인 인연(거주·진료 여부)이 이 기념관 자리 선정의 배경인지는 확인하지 못했다 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+    <h4>집 한 칸 없던 의사</h4><div class="src-row"><span class="src-tag src-record">정사</span><p>장기려는 월남 후 자기 집을 가져 본 적이 없다. 평생 병원이 마련한 사택에서 지냈고, 말년에는 고신의료원 건물 꼭대기층 10여 평 남짓한 곳에서 살았다. 80세가 넘어서도 하루 40여 명을 무료로 진료했고, 1976년 원장직 정년퇴직 뒤에도 거제도에서 섬 주민을 진료했다(서울신문 1995.12.26 별세 기사).</p></div><div class="src-row"><span class="src-tag src-lore">야사·설</span><p>피란 시절 옷이 두 벌만 생겨도 한 벌은 남에게 줬다는 주변인의 회고, 부산대 의대 교수 시절 학비 없는 제자들에게 월급을 내놓은 일이 여러 번이었다는 동료들의 회고가 전한다(같은 기사).</p></div></div></div>
+    <div id="ib7-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>기념관 내부 전시 컷 (사진·유품)</li>
+      <li>아내 편지 이야기를 할 때는 인물 클로즈업 + 창밖 부산항 인서트</li>
+    </ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>장기려의 기다림 다음, 우리가 직접 기다림을 만든다.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“산 위 구간은 여기까지. 아래 동네에선 오늘 저녁 여섯 가지 맛이 기다립니다.” → 초량 일대</span></div></div>
+    <div class="sch-place">★ 유치환의 우체통</div>
+    <div class="sch-sub">장기려 더나눔에서 산복도로(망양로)를 따라 이동. 옥상의 빨간 '느린 우체통'.</div>
+    <div class="sch-badges"><span class="sch-badge">무료</span><span class="sch-badge">약 20분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'ib8-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib8-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib8-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ib8-shot')">🎬 촬영·팁</button>
+    <button class="detail-btn" onclick="toggleDetail(this,'ib8-roman')">🌙 낭만</button></div>
+    <div id="ib8-info" class="detail-body"><div class="detail-inner">
+      <table class="cost-table">
+        <tr><th>위치</th><td>부산 동구 망양로580번길 2</td></tr>
+        <tr><th>구성</th><td>1층 계단식 야외공연장 / 2층 전시 공간 / 옥상 전망대·우체통</td></tr>
+        <tr><th>느린 우체통</th><td>엽서를 넣으면 1년 뒤 배달(한국관광공사 소개 기준). 2013년 설치 당시 보도는 '6개월 뒤' ⚠️</td></tr>
+        <tr><th>접근</th><td>엘리베이터 등 장애인 편의시설 미설치, 주출입구 단차</td></tr>
+      </table>
+    </div></div>
+    <div id="ib8-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 감정표현 풍부 — 엽서 쓰는 마음을 그대로</div><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“여기 넣은 엽서는 1년 뒤에 도착합니다. 오늘의 '기다림'을 직접 만들어 보는 우체통.”</span></div></div><div class="sc"><div class="sc-t">여기 넣은 엽서는 1년 뒤에 도착한다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">옥상의 빨간 느린 우체통</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“지금 엽서를 쓰면 언제 도착할까요? <span class="mk">[여기서 질문]</span> 1년 뒤입니다. 누구에게 쓰시겠어요?”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 엽서 쓰고 우체통에 넣기<br>🎥 엽서 쓰는 손 → 우체통에 넣는 장면 (1일차 핵심 컷)</span></div><div class="sc-row"><span class="sc-k">대체안</span><span class="sc-alt" style="flex:1">엘리베이터가 없고 주출입구 단차가 있다 — 이동이 어려운 참가자는 1층 공연장에서 엽서를 쓰고 가이드가 대신 넣는다(5-6).</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">엽서를 넣으면 1년 뒤 배달된다(한국관광공사 소개 기준). 2013년 설치 당시 보도는 '6개월 뒤'로 적었다 ⚠️.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 정말 1년이에요? → 소개 자료마다 1년·6개월로 다르다 — 현장 안내문 기준으로 답한다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag tr-check">확인 필요</span><span class="sc-tag">2-20 직접 작동해 보기</span><span class="sc-tag">2-17 나와 연결</span><span class="sc-tag">4-4 참여</span></div></div><div class="sc"><div class="sc-t">청마 유치환이 교직 생활을 하다 생을 마친 동네다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">2층 전시, 옥상에서 내려다본 산복도로</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“담장에서 찾은 두 번째 이름, 시인 유치환. 이 동네에서 교사로 지내다 여기서 생을 마쳤습니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">청마 유치환(1908~1967)은 경남 통영에서 태어났다. 경남여고 교장 등을 지내며 부산 동구 초량 산복도로 일대에서 교직 생활을 했고, 이곳에서 생을 마감했다. 부산시는 이 전망대를 2013년 5월 열었다(한국관광공사 표기 2016년 8월 ⚠️).</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“이제 저 아래 항구 앞 동네로 내려갑니다.”</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">유치환이 시조시인 이영도에게 오랜 기간 편지를 보냈다는 이야기는 그가 기혼자였다는 점에서 예민할 수 있다 — 다룰지는 현장 판단(6-7).</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-4 바로 여기의 현장성</span><span class="sc-tag">2-3 이미 아는 것과 연결</span></div></div></div></div>
+    <div id="ib8-history" class="detail-body"><div class="detail-inner">
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>청마 유치환(1908~1967)은 경남 통영에서 태어났다. 경남여고 교장 등을 지내며 부산 동구 초량 산복도로 일대에서 교직 생활을 했고, 이곳에서 생을 마감했다. 부산시는 그의 업적을 기리기 위해 이 전망대를 건립해 2013년 5월 문을 열었다(한국관광공사는 '2016년 8월 개관'으로 표기 ⚠️ — 재단장 시점일 가능성 <span><span class="chk">[확인 필요]</span></span>).</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>유치환은 시조시인 이영도에게 20여 년 동안 수천 통의 편지를 보냈다고 전해진다. 그가 기혼자였다는 점에서 예민할 수 있는 소재다. 편지 통수 등 수치는 자료마다 달라 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+    </div></div>
+    <div id="ib8-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>옥상에서 부산항 조망 + 빨간 우체통 클로즈업</li>
+      <li>엽서 쓰는 손 → 우체통에 넣는 장면 (1일차 핵심 컷)</li>
+    </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>옥상 빨간 우체통을 앞에, 부산항을 뒤에 — 우체통을 화면 한쪽에 크게</li></ul></div><div class="tip-sec"><h5>🚗 이동 팁</h5><ul><li>엘리베이터 등 장애인 편의시설 없음, 주출입구 단차 — 휠체어 참가자는 1층 공연장에서 합류</li></ul></div></div></div><div id="ib8-roman" class="detail-body"><div class="detail-inner"><div class="roman-card"><span class="rc-type">과정형</span><table><tr><th>언제</th><td>옥상 전망대</td></tr><tr><th>무엇을</th><td>엽서를 직접 써서 느린 우체통에 넣기 — 문자 한 통이면 될 걸 굳이</td></tr><tr><th>찍는 법</th><td>엽서 쓰는 손 → 우체통에 넣는 손, 대사 없이</td></tr><tr><th>주의</th><td>배달 시점은 자료마다 1년/6개월로 달라 "나중에 배달된다"까지만</td></tr></table></div><div class="roman-card"><span class="rc-type">수행형</span><table><tr><th>언제</th><td>1층 계단식 야외공연장</td></tr><tr><th>무엇을</th><td>기타로 서투르지만 진심인 한두 소절. 완성도가 아니라 태도가 포인트</td></tr><tr><th>찍는 법</th><td>계단 위에서 내려다보는 와이드 + 손 클로즈업</td></tr><tr><th>안 될 때</th><td>사람이 있으면 짧게 또는 생략</td></tr><tr><th>주의</th><td>유튜브 업로드 시 기존 가요는 음원 저작권 문제가 생길 수 있다 — 자작곡·저작권 만료곡·허밍 위주</td></tr></table></div><div class="notice-inline">낭만 장면은 설명·나레이션 없이 행동과 분위기로만 전달한다(현장음·BGM). 효율보다 "굳이 해 보는 것"이 포인트.</div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>산 위 구간에서 하산. 무거운 이야기 다음이라 톤을 가볍게(3-5).</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“골목 하나 건너면 간판 글자가 바뀝니다. 무슨 나라 글자인지 보세요.” → 텍사스거리</span></div></div>
+    <div class="sch-header" onclick="toggleItem(this)">
+      <div class="sch-place">★ 초량 일대 — 부산역 앞 골목 산책과 저녁</div>
+      <div class="sch-sub">유치환의 우체통에서 초량 아랫동네로 하산(도보 또는 버스 <span><span class="chk">[확인 필요]</span></span>). 시장·텍사스거리·차이나타운을 돌고 마지막에 한 곳에서 저녁.</div>
+      <div class="sch-badges"><span class="sch-badge">저녁 1인 1~2만원대 <span class="chk">[확인 필요]</span></span><span class="sch-badge">약 2시간</span></div>
+      <div class="sch-toggle">▲</div>
+    </div>
+    <div class="sch-content open">
+    <div class="place-block">
+      <div class="place-title">초량 일대 — 부산역 앞</div>
+      <div class="place-desc">개항기 청국 영사관부터 피란 시절 먹거리, 외국인 선원의 거리까지 '항구 앞 동네'의 층위를 골목 단위로 둘러본 뒤, 초량육미거리·돼지갈비골목에서 저녁을 먹으며 1일차를 닫는다. 숙소는 부산역 주변.</div>
+      <div class="place-route">동선: 초량전통시장 → 텍사스거리 → 차이나타운(상해거리) → 초량육미거리·돼지갈비골목(저녁)</div>
+
+      <div class="spot-card">
+        <div class="spot-name">① 초량전통시장</div>
+        <div class="spot-sub">개항 이후의 근대사와 함께해 온 재래시장.</div>
+        <div class="detail-btns">
+          <button class="detail-btn" onclick="toggleDetail(this,'d1-mk-point')">💬 소재 카드</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'d1-mk-history')">📜 이야기</button>
+        </div>
+        <div id="d1-mk-point" class="detail-body"><div class="detail-inner"><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“산 위의 무거운 이야기는 내려놓고 군것질 타임. 오늘 저녁 '초량육미' 여섯 가지 중 몇 개나 먹을까요?”</span></div></div><div class="sc"><div class="sc-t">오늘 저녁 미션 — 여섯 가지 맛 중 몇 개를 먹을까.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">시장 어묵 가게</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“초량육미, 여섯 가지 맛이라는데 뭘까요? <span class="mk">[여기서 질문]</span> 하나는 지금 여기서 먹습니다 — 어묵.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 육미 여섯 가지 맞히기<br>🎥 어묵 한 입 리액션</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">초량전통시장은 일제강점기 초량동에 보따리 상인들이 모여들며 형성되기 시작해 1975년 상가 건물형 시장으로 정식 개설됐다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-1 몸의 공통 경험</span><span class="sc-tag">4-10 유머</span><span class="sc-tag">4-4 참여</span></div></div></div></div>
+        <div id="d1-mk-history" class="detail-body"><div class="detail-inner">
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>초량전통시장은 일제강점기 초량동에 보따리 상인들이 모여들며 형성되기 시작해 1975년 상가 건물형 시장으로 정식 개설됐다.</p></div>
+        </div></div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-name">② 텍사스거리</div>
+        <div class="spot-sub">청관거리 → 텍사스촌 → 러시아 거리로 국적이 겹겹이 바뀐 골목. 2025년 조형물 철거 결정.</div>
+        <div class="detail-btns">
+          <button class="detail-btn" onclick="toggleDetail(this,'tx-point')">💬 소재 카드</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'tx-history')">📜 이야기</button>
+        </div>
+        <div id="tx-point" class="detail-body"><div class="detail-inner"><div class="sc"><div class="sc-t">한 골목에 붙은 이름이 세 번 바뀌었다 — 청관거리, 텍사스촌, 러시아 거리.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">러시아어 간판들, 거리 조형물(철거 여부 확인)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이 간판, 무슨 글자예요? <span class="mk">[여기서 질문]</span> 그런데 이 골목 이름은 '텍사스'예요.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 간판 글자 맞히기</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">1884년 청국 영사관이 들어선 뒤 '청관거리'의 일부였고, 1950년대 외국인 선원과 미군 상대 유흥시설이 모이며 '텍사스촌'으로 불렸다. 1990년 한소 수교 이후 러시아 선원과 보따리상이 늘며 러시아어 간판이 즐비해졌다. 2017년 설치된 카우보이 조형물은 비판 끝에 부산시가 2025년 7월 말 철거를 발표했다.</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">유흥가 역사는 사실관계만 짧게, 자극적으로 다루지 않는다(6-7). 철거 완료·명칭 변경 여부는 촬영 전 확인.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag tr-check">확인 필요</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-21 이름과 실제의 반전</span><span class="sc-tag">4-4 참여</span></div></div></div></div>
+        <div id="tx-history" class="detail-body"><div class="detail-inner">
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>이 일대는 1884년 초량에 청국 영사관이 들어선 뒤 중국인 거주지·점포가 모인 '청관거리'의 일부였다. 1950년대에는 외국인 선원과 미군을 상대로 한 유흥시설이 모이며 '텍사스촌'으로 불렸고, 1990년 한소 수교 이후에는 러시아 선원과 보따리상이 늘며 러시아어 간판이 즐비한 거리가 되기도 했다.</p></div>
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>2017년 동구가 카우보이·선인장 조형물을 설치했으나 부정적 역사를 부각한다는 비판이 이어졌고, 부산시는 2025년 7월 말 조형물 철거를 발표했다. 철거 완료 여부·거리 명칭 변경 여부는 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+          <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>원래 텍사스촌은 중구 중앙동 쪽에 있었는데 1953년 부산역전 대화재 뒤 초량 쪽으로 옮겨왔다는 설명이 있다 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+        </div></div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-name">③ 차이나타운 (상해거리)</div>
+        <div class="spot-sub">1884년 청국 영사관 설치에서 시작해 이름이 네 번 바뀐 거리.</div>
+        <div class="detail-btns">
+          <button class="detail-btn" onclick="toggleDetail(this,'ct-point')">💬 소재 카드</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'ct-history')">📜 이야기</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'ct-shot')">🎬 촬영·팁</button>
+        </div>
+        <div id="ct-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 로컬음식 도전 — 중국 만두 등 첫입</div><div class="sc"><div class="sc-t">거리 이름이 네 번 바뀌었다 — 이름마다 그 시대의 힘이 보인다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">상해문, 화교중학교 삼국지 벽화</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이 거리 이름, 지금은 '상해거리'. 그 전엔 뭐였을까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 옛 이름 맞히기<br>🎥 상해문 → 삼국지 벽화 → 홍등 골목</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">1884년 초량에 청국 영사관이 설치되며 부산 화교의 역사가 시작됐다. '청국 조계지'(개항기) → '시나마치'(일제강점기) → '청관거리'(해방 이후) → '상해거리'(1993년~, 부산·상하이 자매결연 기념)로 이름이 바뀌었다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 아까 백제병원이 왜 중국요릿집이 됐어요? → 이 거리가 바로 그 이유 — 1933년 중국인 사업가가 건물을 사 청요릿집 봉래각을 열었다(복선 회수).</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-21 이름과 실제의 반전</span><span class="sc-tag">4-4 참여</span></div></div></div></div>
+        <div id="ct-history" class="detail-body"><div class="detail-inner">
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>1884년 초량에 청국 영사관이 설치되며 부산 화교의 역사가 시작됐다. 이후 '청국 조계지'(개항기) → '시나마치'(일제강점기) → '청관거리'(해방 이후) → '상해거리'(1993년~)로 이름이 바뀌었다. 상해거리라는 이름은 1993년 부산과 상하이의 자매결연을 기념한 것이다. 입구에는 '상해문'이 서 있고, 부산화교중학교 담장에는 삼국지 벽화가 있다.</p></div>
+          <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>1884년 14명이던 화교 인구가 1890년 164명으로 늘었다는 수치, 청국 조계지 획득 연도(1887년)는 단일 자료에 기댄 것이다 ⚠️ <span><span class="chk">[확인 필요]</span></span>.</p></div>
+        </div></div>
+        <div id="ct-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+          <li>상해문 전경 / 화교중학교 삼국지 벽화 / 홍등 골목 야경</li>
+        </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>상해문은 정면 대칭으로, 저녁이면 홍등 골목을 낮게</li></ul></div></div></div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-name">④ 저녁 — 초량육미거리 · 돼지갈비골목</div>
+        <div class="spot-sub">차이나타운에서 초량동 쪽으로 되돌아와 1일차의 마지막 자리.</div>
+        <div class="detail-btns">
+          <button class="detail-btn" onclick="toggleDetail(this,'dn-info')">📍 기본 정보</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'dn-point')">💬 소재 카드</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'dn-history')">📜 이야기</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'dn-shot')">🎬 촬영·팁</button>
+        <button class="detail-btn" onclick="toggleDetail(this,'dn-roman')">🌙 낭만</button></div>
+        <div id="dn-info" class="detail-body"><div class="detail-inner">
+          <table class="cost-table">
+            <tr><th>육미</th><td>돼지갈비 · 돼지불백 · 돼지국밥 · 밀면 · 어묵 · 곰장어</td></tr>
+            <tr><th>갈비골목</th><td>초량전통시장과 접한 구역. 전성기 38곳 → 현재 12곳 안팎으로 소개됨 ⚠️</td></tr>
+            <tr><th>안내 원칙</th><td>특정 점포명 없이 골목 단위, 현장에서 자리 선택</td></tr>
+          </table>
+        </div></div>
+        <div id="dn-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 아재감성 — 무쇠 불판 앞 개그톤</div><div class="qc"><div class="qc-k">질문 카드 · 1일차 작은 회수 — 기다림</div><div class="qc-say">“아침에 물었죠. 저 산비탈 사람들은 무엇을 기다렸을까. <span class="mk">[천천히]</span> 피란민들은 돌아갈 고향을, 장기려는 북에 두고 온 아내를, 김민부의 노래는 떠난 임을 기다렸습니다. 오늘 제가 넣은 엽서는 1년 뒤에 도착합니다. <span class="mk">[침묵]</span> 그리고 이건 원도심의 첫 번째 층일 뿐입니다 — 내일은 한 층 더 내려갑니다.”</div><div class="qc-note">코스 클로징이 아니다. 고정 클로징 인사는 하지 않는다.</div></div><div class="sc"><div class="sc-t">돼지갈비는 뼈에 살점 조금 붙은 고기를 좌판에서 굽던 데서 시작됐다고 전한다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">무쇠 불판 위 돼지갈비</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“산 위에서 들은 피란민 이야기가 지금 이 밥상에 올라와 있습니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 오늘 육미 몇 개 먹었는지 세기 (시장 미션 회수)<br>🎥 불판 클로즈업 → 식탁 회수 멘트</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">부산 동구는 돼지갈비·돼지불백·돼지국밥·밀면·어묵·곰장어를 묶어 '초량육미'로 소개한다. 한국전쟁 뒤 피란민이 정착하며 음식 문화가 섞였고, 초량천 인근 좌판에서 뼈에 살점이 조금 붙은 고기를 굽던 것이 돼지갈비의 시작이었다고 전해진다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag tr-yasa">야사·설</span><span class="sc-tag act">활동</span><span class="sc-tag">2-15 보통 사람의 시선</span><span class="sc-tag">2-1 몸의 공통 경험</span><span class="sc-tag">4-4 참여</span></div></div></div></div>
+        <div id="dn-history" class="detail-body"><div class="detail-inner"><div class="guide-tip"><div class="guide-tip-label">가이드 포인트</div><p>1일차의 작은 질문을 닫는 자리. 오늘 만난 사람을 순서대로 불러내고, "이건 첫 층일 뿐"으로 내일을 연다.</p></div>
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>부산 동구는 부산역 앞 초량동 일대의 대표 음식 여섯 가지(돼지갈비·돼지불백·돼지국밥·밀면·어묵·곰장어)를 묶어 '초량육미'로 소개한다.</p></div>
+          <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>한국전쟁 뒤 피란민이 정착하며 여러 지역의 음식 문화가 섞였고, 1960~70년대 인근 공장 노동자들이 값싸고 든든한 한 끼를 찾으면서 지금의 먹거리 거리로 자리 잡았다는 것이 통설이다. 초량천 인근 좌판에서 뼈에 살점이 조금 붙은 고기를 굽던 것이 돼지갈비의 시작이었다고 전해진다.</p></div>
+        </div></div>
+        <div id="dn-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+          <li>육미거리 간판 / 무쇠 불판 갈비 클로즈업 / 식탁에서 1일차 회수 멘트 → 초량 밤거리</li>
+        </ul></div></div></div><div id="dn-roman" class="detail-body"><div class="detail-inner"><div class="roman-card"><span class="rc-type">소비형</span><table><tr><th>언제</th><td>1일차 저녁</td></tr><tr><th>무엇을</th><td>돼지갈비 골목 노포에서 소주 + 갈비 — 짠 클로즈업</td></tr><tr><th>찍는 법</th><td>불판 연기 너머 잔, 골목 간판 와이드(손님 얼굴 노출 주의)</td></tr></table></div><div class="notice-inline">낭만 장면은 설명·나레이션 없이 행동과 분위기로만 전달한다(현장음·BGM). 효율보다 "굳이 해 보는 것"이 포인트.</div></div></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- ================= 2일차 ================= -->
+  <div class="day-header">
+    <div class="d-label">DAY 2 · 수요일</div>
+    <div class="d-title">북항 → 남포동 — 지금의 층에서 왜관 터까지</div>
+    <div class="d-sub">부산역 주변 숙소에서 출발 · 도보 + 도시철도 1호선 · 장보기(다음 날 조식용) · 숙박: 남포동 일대 조리 가능 숙소</div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>어제 산 위에서 내려다본 바다로. 부산역 2층 대합실에서 바로 연결.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“지하철 몇 정거장이면 부산의 옛 중심가입니다.” → 도시철도 1호선</span></div></div>
+    <div class="sch-place"><span class="layer-badge">지금의 층</span>★ 북항친수공원</div>
+    <div class="sch-sub">부산역 2층 대합실에서 바로 연결. 개항 146년 만에 시민에게 열린 항구. (신규 조사 스팟)</div>
+    <div class="sch-badges"><span class="sch-badge">무료</span><span class="sch-badge">약 60분</span><span class="sch-badge">개방시간 확인 필요</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'bh-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'bh-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'bh-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'bh-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="bh-info" class="detail-body"><div class="detail-inner">
+      <table class="cost-table">
+        <tr><th>위치</th><td>부산 동구 초량동 일대 북항 재개발 1단계 구역 (하늘다리: 동구 초량동 1185-1)</td></tr>
+        <tr><th>가는 법</th><td>도시철도 1호선 부산역 6번 출구 → 기차 부산역 2층 대합실 9번 출구 → 하늘다리 → 보행데크 (2022년 부산시 소개 기준)</td></tr>
+        <tr><th>규모</th><td>축구장 17배 면적의 근린공원, 1.3km 경관 수로 (부산시 소개)</td></tr>
+        <tr><th>개방</th><td>2022년 5월 4일 전면 개방. 개방시간 09:00~17:00로 소개됨(2022년 기준) <span><span class="chk">[확인 필요]</span></span></td></tr>
+      </table>
+    </div></div>
+    <div id="bh-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 감정표현 풍부 — 실내에서 바다가 열리는 순간 감탄 먼저</div><div class="qc"><div class="qc-k">질문 카드 · 하루 시작 (3-6 복습 콜백 · 3-7)</div><div class="or-row"><span class="or-k">어제 복습</span><span>“어제는 산 위에서 기다림의 동네를 걸었죠. 원도심의 첫 번째 층.”</span></div><div class="or-row"><span class="or-k">오늘 동선</span><span>“오늘은 바닷가의 '지금' 층에서 시작해, 일제강점기 건물, 그 아래 왜관 터, 그 위의 피란 시장까지. 저녁엔 내일 아침 재료를 삽니다.”</span></div><div class="or-row"><span class="or-k">안전·규칙</span><span>“1월 바닷바람이 셉니다. 북항은 짧게 보고 실내로 이어 갑니다.”</span></div></div><div class="sc"><div class="sc-t">어제 위에서 내려다본 항구에, 오늘 처음으로 들어간다 — 146년 만에 열린 바닷가.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">보행데크와 부산항대교, 뒤돌아 보이는 초량 산복도로</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“어제 산 위에서 본 그 항구, 오늘은 그 앞에 서 있습니다. 그런데 이 바닷가, 시민이 들어올 수 있게 된 게 언제부터일까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 개방 연도 맞히기<br>🎥 대합실 → 하늘다리로 나서는 전환 컷 / 뒤돌아 어제 걸은 산복도로</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">부산항 북항 1단계 친수공원은 2022년 5월 4일 전면 개방됐다. 부산시는 1876년 개항 이후 항만으로만 쓰인 북항이 146년 만에 시민에게 돌아온 것으로 소개했다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 앞으로 더 생겨요? → 2단계(자성대부두·부산역·범일동 일원)는 2022년 예비타당성 조사를 통과했다. 사업성 논쟁이 진행 중이라 한쪽 편을 들지 않는다(6-7).</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“지금 층은 지금도 쌓이는 중입니다. 이제 한 층 아래로 내려갑니다.”</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-5 통념 뒤집기</span><span class="sc-tag">2-24 보는 자리</span><span class="sc-tag">4-4 참여</span></div></div></div></div>
+    <div id="bh-history" class="detail-body"><div class="detail-inner">
+      <h4>146년 만에 열린 항구</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>부산항 북항 1단계 공공시설인 친수공원은 2022년 5월 4일 전면 개방됐다. 부산시는 이를 1876년 강화도조약으로 개방된 뒤 오랜 기간 항만으로만 쓰인 북항이 146년 만에 해양공원으로 시민에게 돌아온 것으로 소개했다.</p></div>
+      <h4>북항 재개발</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>북항 재개발은 국내 첫 항만 재개발 사업으로, 1단계는 2008년부터 연안부두~4부두 일원 155만㎡를 조성해 2027년 완료할 계획으로 보도됐다. 2단계(자성대부두·부산역·범일동 일원, 228만㎡)는 2022년 예비타당성 조사를 통과했다. 1단계 사업은 친수·항만시설 조성이 중심이며, 사업 시행자는 부산항만공사다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>2024년 12월 토론회에서는 북항을 "욕망의 공간"으로 만들면 안 된다며 친수공원 기능은 지키되 2·3단계는 장기적으로 추진해야 한다는 시민단체 쪽 지적이 나왔다. 사업성 문제를 둘러싼 논쟁은 진행 중이다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>2026년 10월에는 상어 '부캉이'가 인기를 끌며 북항 친수공원 방문객이 크게 늘었다는 보도가 있었다. 무엇이었는지(설치물·행사 등)와 촬영 시점 존속 여부는 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+    </div></div>
+    <div id="bh-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>부산역 대합실에서 하늘다리로 나서는 순간 — 실내에서 바다가 열리는 전환 컷</li>
+      <li>보행데크 곡선 + 부산항대교 원경</li>
+      <li>뒤돌아 어제 걸은 초량 산복도로를 바라보는 컷 (어제 위층 ↔ 오늘 바닷가)</li>
+    </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>보행데크 곡선을 앞에 걸고 부산항대교를 멀리</li></ul></div><div class="tip-sec"><h5>🚗 이동 팁</h5><ul><li>도시철도 부산역 6번 출구 → 기차 부산역 2층 대합실 9번 출구 → 하늘다리 → 보행데크(2022년 부산시 소개)</li></ul></div><div class="tip-sec"><h5>⏱ 시간·우선순위 팁</h5><ul><li>개방시간 09:00~17:00로 소개(2022년) [확인 필요]</li></ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>북항에서 부산역으로 돌아와 1호선.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 찾기 미션형</span><span>“지하철 노선도에서 '중앙'역을 찾아보세요. 그 이름이 왜 붙었는지가 다음 장소 이야기입니다.”</span></div></div>
+    <div class="sch-place">이동 — 도시철도 1호선으로 남포동 방면</div>
+    <div class="sch-sub">부산역에서 1호선 남쪽 방면(중앙·남포). 하차역과 출구는 첫 방문지(백산기념관) 기준으로 확인 <span><span class="chk">[확인 필요]</span></span>.</div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'mv1-point')">💬 소재 카드</button>
+    </div>
+    <div id="mv1-point" class="detail-body"><div class="detail-inner"><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“부산역에서 남포동까지 몇 정거장. 이 짧은 구간에 부산의 옛 중심가가 다 들어 있습니다. 내리면 같은 시대의 두 얼굴을 연달아 봅니다.”</span></div></div><div class="notice-inline">이동 중에는 짧은 한마디만. 점심은 남포동 시장 구간에서 자유롭게.</div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>1호선에서 내려 남포동 북쪽 끝. 어제 초량교회에서 걸어 둔 백산상회 복선을 회수한다(3-6).</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“5분 거리에 같은 시대 두 얼굴이 있습니다. 하나는 돈을 댔고, 하나는 돈을 가져갔어요.” → 백산기념관부터</span></div></div>
+    <div class="sch-header" onclick="toggleItem(this)">
+      <div class="sch-place"><span class="layer-badge">일제강점기의 층</span>중앙동·광복동 — 백산기념관 · 부산근현대역사관</div>
+      <div class="sch-sub">남포동 일대의 북쪽 끝. 성벽도 왜관도 사라진 뒤 이 땅을 차지한 것들과, 그에 맞선 사람들.</div>
+      <div class="sch-badges"><span class="sch-badge">무료</span><span class="sch-badge">약 50분</span><span class="sch-badge">월요일 휴관(수요일 방문)</span></div>
+      <div class="sch-toggle">▲</div>
+    </div>
+    <div class="sch-content open">
+    <div class="place-block">
+      <div class="place-title">중앙동·광복동 일대</div>
+      <div class="place-desc">독립운동 자금줄이었던 백산상회 옛터와, 식민지 수탈기구 동양척식주식회사 건물이 도보 5분 거리에 있다. 같은 시대의 두 얼굴을 연달아 본다.</div>
+      <div class="place-route">동선: 백산기념관 → 부산근현대역사관</div>
+
+      <div class="spot-card">
+        <div class="spot-name">① 백산기념관</div>
+        <div class="spot-sub">백산상회 옛터. 1995년 광복 50주년 개관.</div>
+        <div class="detail-btns">
+          <button class="detail-btn" onclick="toggleDetail(this,'bsn-info')">📍 기본 정보</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'bsn-point')">💬 소재 카드</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'bsn-history')">📜 이야기</button>
+        <button class="detail-btn" onclick="toggleDetail(this,'bsn-tip')">🎬 촬영·팁</button></div>
+        <div id="bsn-info" class="detail-body"><div class="detail-inner"><ul>
+          <li>1995년 광복 50주년 개관, 백산상회 옛터</li>
+          <li>무료입장, 월요일 휴관</li>
+        </ul></div></div>
+        <div id="bsn-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 아빠감성</div><div class="sc"><div class="sc-t">무역회사가 독립운동 자금줄이었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">백산상회 옛터의 기념관</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“어제 초량교회에서 '백산상회' 이름 들으셨죠. 여기가 그 자리입니다. 장사하면서 독립운동 자금을 댔어요.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">백산 안희제(1885~1943)는 1914년 부산 동광동에 백산상회를 설립해 독립운동 자금을 마련했고, 1919년 백산무역주식회사로 확장해 대한민국 임시정부와 국내외 독립운동 단체에 자금을 지원했다. 1995년 8월 15일 그 자리에 백산기념관이 개관했다.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“5분만 걸으면, 같은 시대 정반대 편의 건물이 있습니다.”</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-5 통념 뒤집기</span><span class="sc-tag">2-4 바로 여기의 현장성</span><span class="sc-tag">2-15 보통 사람의 시선</span></div></div><details class="spare"><summary>예비 카드 2장 — 시간·반응 보고 골라 쓰기</summary><div class="sc"><div class="sc-t">경주 최부잣집 돈이 이 가게를 거쳐 상해 임시정부로 갔다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">기념관 전시의 주주 명단(현장 확인)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“'경주 최부잣집' 들어 보셨죠? <span class="mk">[여기서 질문]</span> 그 집 주인 최준도 이 회사 주주였습니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">백산상회·백산무역에는 양산의 윤현태, 경주 최부자로 알려진 최준 등 영남 자산가들이 출자했고, 출자금 대부분이 임시정부 운영자금으로 갔다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag tr-field">현장 확인</span><span class="sc-tag">2-3 이미 아는 것과 연결</span><span class="sc-tag">2-15 보통 사람의 시선</span><span class="sc-tag">2-5 통념 뒤집기</span></div></div><div class="sc"><div class="sc-t">광복 뒤 장부를 본 주주가 묘소 앞에서 울었다고 전한다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">기념관 전시</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“광복 후 김구가 최준에게 장부 하나를 보여 줍니다. <span class="mk">[천천히]</span> 그 돈이 다 어디로 갔는지 적힌 장부. <span class="mk">[침묵]</span>”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">김구가 최준에게 독립운동 자금 장부를 보여 주자 최준이 백산의 묘소 앞에서 통곡했다고 전한다. 백산은 1943년 고문 끝에 숨졌다.</span></div><div class="sc-tags"><span class="sc-tag tr-yasa">야사·설</span><span class="sc-tag">2-6 인물의 감정·동기</span><span class="sc-tag">4-3 언어 리듬·타이밍</span></div></div></details></div></div>
+        <div id="bsn-history" class="detail-body"><div class="detail-inner">
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>백산 안희제(1885~1943)는 1914년 부산 동광동에 백산상회를 설립해 독립운동 자금을 마련했고, 1919년 백산무역주식회사로 확장해 대한민국 임시정부와 국내외 독립운동 단체에 자금을 지원했다. 1995년 8월 15일 백산상회가 실제로 있던 자리에 백산기념관이 개관했다.</p></div>
+        <h4>논 2,000마지기를 판 돈</h4><div class="src-row"><span class="src-tag src-record">정사</span><p>안희제(1885~1943)는 경남 의령 출신으로, 고향 논 2,000마지기(약 40만 평)를 팔아 1914년 9월 부산에 백산상회를 세웠다. 곡물·면포·해산물을 위탁 판매하는 개인기업이었고 3년 뒤 합자회사가 됐다. 경남 양산의 대지주 윤현태, 경주 최부자로 알려진 최준 등 영남 자산가들이 출자했다(서울신문 2019).</p></div><div class="src-row"><span class="src-tag src-record">정사</span><p>1919년 백산무역주식회사로 확대 개편해 주주 출자금 대부분을 임시정부 운영자금으로 보냈다. 국내외 20여 곳에 지점·연락사무소를 두었고, 김규식의 파리평화회의 독립청원서 제출 경비도 댔다. 1921년부터 자금난이 깊어져 1928년 1월 파산했다.</p></div><div class="src-row"><span class="src-tag src-record">정사</span><p>1932년부터 만주 동경성 일대에 발해농장을 개간해 실농민 300여 호를 이주시켰고, 실질적인 국외 독립운동기지로 운영했다. 1942년 대종교 간부 검거 사건(임오교변)으로 붙잡혀 9개월간 고문을 받고, 풀려난 지 몇 시간 만인 1943년 9월 12일 숨졌다.</p></div><div class="src-row"><span class="src-tag src-lore">야사·설</span><p>광복 뒤 김구가 최준에게 독립운동 자금 장부를 보여 주자, 최준이 백산의 묘소 앞에서 통곡했다고 전한다.</p></div></div></div><div id="bsn-tip" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>💰 비용 팁</h5><ul><li>무료</li></ul></div><div class="tip-sec"><h5>⏱ 시간·우선순위 팁</h5><ul><li>월요일 휴관</li></ul></div></div></div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-name">② ★ 부산근현대역사관</div>
+        <div class="spot-sub">옛 동양척식주식회사 부산지점(별관) + 옛 한국은행 부산본부(본관).</div>
+        <div class="detail-btns">
+          <button class="detail-btn" onclick="toggleDetail(this,'bmh-info')">📍 기본 정보</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'bmh-point')">💬 소재 카드</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'bmh-history')">📜 이야기</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'bmh-shot')">🎬 촬영·팁</button>
+        </div>
+        <div id="bmh-info" class="detail-body"><div class="detail-inner"><ul>
+          <li>별관: 1929년 건립(옛 동양척식주식회사), 2003년 박물관 개관</li>
+          <li>2023년 본관(옛 한국은행 부산본부) 통합, 명칭 확장</li>
+          <li>무료입장, 월요일 휴관</li>
+        </ul></div></div>
+        <div id="bmh-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 세심함 — 로비 아치 구조</div><div class="sc"><div class="sc-t">같은 시대, 반대편 얼굴 — 수탈 회사의 건물.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">1929년 옛 동양척식주식회사 부산지점 건물(별관)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“방금 독립운동 자금줄을 봤죠. 이 건물은 정반대였습니다. 무슨 회사였을까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">🎥 1층 로비 아치형 구조</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">별관 건물은 1929년 식민지 수탈기구인 동양척식주식회사 부산지점으로 신축됐다. 광복 후 미군이 접수해 미문화원으로 쓰이다 1999년 반환, 2003년 부산근대역사관으로 개관했다. 2023년 옛 한국은행 부산본부를 본관으로 더해 '부산근현대역사관'이 됐다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 부산근대역사관 아니에요? → 2023년에 '근현대'로 이름이 확장됐다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-14 유물이 겪은 운명</span><span class="sc-tag">4-4 참여</span></div></div><div class="sc"><div class="sc-t">1914년, 바닷가 시가지가 '부산'이 되고 원래 중심은 '동래군'으로 떨어져 나갔다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">전시의 행정구역 변천(현장 확인)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“지금 우리가 '부산' 하면 이 바닷가죠. 그 이름이 바닷가 차지가 된 게 1914년입니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">1914년 시가지는 부(府)로, 농촌은 군(郡)으로 개편되면서 부산포 일대의 일본인 개발 지역은 부산부로, 그 밖의 지역은 동래군으로 바뀌었다. 공공시설과 상공업·철도·항만이 부산부에 집중되며 변방이던 이곳이 중심이 됐다.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“그럼 원래 중심이던 동래는? 마지막 날 갑니다.”</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-5 통념 뒤집기</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-11 서열·위계</span></div></div></div></div>
+        <div id="bmh-history" class="detail-body"><div class="detail-inner"><div class="guide-tip"><div class="guide-tip-label">가이드 포인트</div><p>백산(저항)과 동척(수탈)을 5분 간격으로 연달아 보여주는 대비 구간. 1914년 행정 개편은 3일차 동래 회수의 핵심 복선.</p></div>
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>별관 건물은 1929년 식민지 수탈기구인 동양척식주식회사 부산지점으로 신축됐다. 광복 후 미군이 접수해 미문화원으로 쓰이다 1999년 반환, 2003년 부산근대역사관으로 개관했다. 2023년 3월 별관으로 재개관했으며, 옛 한국은행 부산본부 건물을 본관으로 새로 개관하며 '부산근현대역사관'으로 명칭이 확장됐다. 2022년 유네스코 세계유산 잠정목록 《한국전쟁기 피란수도 부산의 유산》에 포함됐다.</p></div>
+          <h4>1914년 — 바닷가가 '부산'이 되다</h4>
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>1914년 시가지는 부(府)로, 농촌은 군(郡)으로 지방행정조직이 개편되면서 부산포 일대의 일본인 개발 지역은 부산부로, 그 밖의 농촌 지역은 동래군으로 바뀌었다. 새 공공시설과 상공업·철도·항만시설이 부산부에 집중되면서 변방이던 이곳이 정치·행정의 중심이 됐다.</p></div>
+        </div></div>
+        <div id="bmh-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+          <li>근대 서양식 건물 외관 / 1층 로비 아치형 구조</li>
+        </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>1층 로비 아치는 정중앙에서 대칭으로</li></ul></div><div class="tip-sec"><h5>💰 비용 팁</h5><ul><li>무료</li></ul></div><div class="tip-sec"><h5>⏱ 시간·우선순위 팁</h5><ul><li>월요일 휴관</li></ul></div></div></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>근현대역사관에서 걸어서. 일제의 층 아래, 조선의 층을 처음 만난다.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“산을 내려가면 왜관 터 위에 피란민이 만든 시장이 있습니다.” → 남포동 시장 골목</span></div></div>
+    <div class="sch-place"><span class="layer-badge">조선의 층(왜관)</span>★ 용두산공원 · 부산타워</div>
+    <div class="sch-sub">근현대역사관에서 도보 이동. 일제강점기 신사 터이자, 그보다 아래층은 조선 후기 초량왜관의 중심.</div>
+    <div class="sch-badges"><span class="sch-badge">공원 무료 · 전망대 유료</span><span class="sch-badge">약 40분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'bt-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'bt-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'bt-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'bt-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="bt-info" class="detail-body"><div class="detail-inner"><ul>
+      <li>부산타워: 높이 120m, 1973년 완공. 등록 명칭은 '부산타워', 2021년 리뉴얼 후 '다이아몬드 타워' 브랜드명 병용</li>
+      <li>명칭·운영사 최근 변동 있어 현장 확인 필요, 전망대 요금 <span><span class="chk">[확인 필요]</span></span></li>
+    </ul></div></div>
+    <div id="bt-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 호기심 노출 — 탑 뒤 기단 흔적 같이 찾기</div><div class="flow6"><div class="flow6-h">장소 흐름 — 6단계 (3-1)</div><table><tr><td class="n">1. 도입</td><td>“지금 서 있는 이 산 아래에, 몇 겹이 있을까요?” <span class="mk">[여기서 질문]</span></td></tr><tr><td class="n">2. 사실</td><td>부산타워 1973년. 그 자리는 일제강점기 용두산 신사 터. 그 아래는 1678년부터 약 200년간의 초량왜관.</td></tr><tr><td class="n">3. 예고</td><td>“손가락 세 개로 세 겹을 짚어 봅니다.”</td></tr><tr><td class="n">4. 증거</td><td>탑 뒤편 계단의 신사 기단 흔적, 전망대에서 보이는 원도심 전체.</td></tr><tr><td class="n">5. 반박</td><td>“왜관은 일본 땅이었다?” — 조선 동래부가 관할하고 통제했다.</td></tr><tr><td class="n">6. 마무리</td><td>“이 왜관을 감독하던 관청은 여기가 아니라 동래에 있었습니다. 마지막 날 그리로 갑니다.”</td></tr></table><div class="ver"><span class="ver-k">30초</span><span>“이 산 위에 세 겹이 있습니다. 1973년 타워, 그 밑 일제 신사 터, 그 밑 조선의 왜관. 그 왜관을 다스린 곳은 동래였습니다.”</span></div><div class="ver"><span class="ver-k">3분</span><span>도입 → 세 겹 카드 → 반박(동래부 관할) → 마무리. 서울타워 비교는 한 문장.</span></div></div><div class="sc"><div class="sc-t">한 자리에 세 겹 — 타워, 신사 터, 왜관.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">부산타워, 탑 뒤편 신사 기단 흔적</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“손가락 하나, 이 타워. 둘, 탑 뒤 계단의 돌 — 일제 신사 터. 셋, 그 밑 — 조선의 왜관. <span class="mk">[침묵]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 손가락으로 세 겹 짚기<br>🎥 신사 기단 흔적 → 타워 틸트업(아래층 → 위층)</span></div><div class="sc-row"><span class="sc-k">대체안</span><span class="sc-alt" style="flex:1">계단 쪽 기단 흔적까지 가기 어려운 참가자에게는 사진 카드로 보여준다(4-5).</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">부산타워는 1973년 완공된 높이 120m 전망탑이다. 지금 자리는 일제강점기 용두산 신사 터로, 탑 뒤편 계단에 신사 기단 흔적이 남아 있다. 1678년 지금의 광복동 일대로 옮겨 온 초량왜관(약 10만 평)은 이 용두산을 경계로 동관과 서관으로 나뉘었다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 왜관이 뭐예요? → 조선이 일본인의 외교·무역을 위해 정해 준 구역. 조선 인삼·중국 비단·일본 은이 오가던 중계무역지.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-18 엿보기</span><span class="sc-tag">4-4 참여</span><span class="sc-tag">4-5 시각 보조</span></div></div><div class="sc"><div class="sc-t">부산타워는 서울 남산타워보다 2년 먼저 섰다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">타워 전경</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“남산타워랑 부산타워, 누가 먼저일까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 먼저 세워진 탑 맞히기</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">부산타워는 1973년 완공돼 남산서울타워보다 2년 앞서 준공됐다. 등록 명칭은 '부산타워'이고, 2021년 리뉴얼 뒤 '다이아몬드 타워' 브랜드명을 함께 쓴다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-16 최초·최대·유일</span><span class="sc-tag">2-3 이미 아는 것과 연결</span><span class="sc-tag">4-4 참여</span></div></div><div class="sc"><div class="sc-t">왜관은 일본 땅이 아니었다 — 말을 안 들으면 조선이 생필품을 끊었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">전망대에서 내려다본 광복동 일대</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“왜관이 일본 땅이었을까요? 이 구역을 관할한 건 조선의 동래부였습니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">왜관은 조선 경상도 동래부 관할이었다. 동래부사는 통역관인 훈도·별차를 통해 교섭했고, 왜관이 조선의 요구에 응하지 않으면 생필품 지급이나 개시(정기 무역)를 중단하는 방식으로 통제했다.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“그 동래부, 마지막 날 직접 갑니다.”</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-5 통념 뒤집기</span><span class="sc-tag">2-13 금기와 규칙</span><span class="sc-tag">2-2③ 왜?③ 다스림</span></div></div><div class="sc"><div class="sc-t">전망대 유리 반사를 피하려면 렌즈를 유리에 붙인다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">전망대 유리창</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“사진 팁. 렌즈를 유리에 바짝 붙이면 반사가 사라집니다. 어제 걸은 초량, 오늘 아침 북항, 이제 갈 시장이 한눈에 보여요.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 어제·오늘 지나온 곳 찾아 가리키기</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">전망대에서 원도심과 부산항 전체가 보인다 — 코스 전체 지도.</span></div><div class="sc-tags"><span class="sc-tag tr-field">현장 확인</span><span class="sc-tag act">활동</span><span class="sc-tag">2-24 보는 자리</span><span class="sc-tag">4-4 참여</span></div></div><details class="spare"><summary>예비 카드 1장 — 시간·반응 보고 골라 쓰기</summary><div class="sc"><div class="sc-t">이 공원 이름은 한때 대통령의 호를 따 '우남공원'이었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">공원 입구 표석</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“용두산공원, 이 이름이 한 번 바뀐 적이 있습니다. 무슨 이름이었을까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 바뀌었던 이름 맞히기</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">1955년 이승만의 호를 딴 '우남공원'이 됐고, 1960년 4·19 뒤 용두산공원으로 돌아왔다. 산 이름 '용두(龍頭)'는 용의 머리 — 왜구를 막는 용이라는 이야기가 전한다.</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">정치적 평가는 덧붙이지 않는다(6-7). 연도는 출처 1건 ⚠️.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag tr-yasa">야사·설</span><span class="sc-tag act">활동</span><span class="sc-tag">2-21 이름과 실제의 반전</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">4-8 한자 풀이</span><span class="sc-tag">4-4 참여</span></div></div></details></div></div>
+    <div id="bt-history" class="detail-body"><div class="detail-inner"><div class="guide-tip"><div class="guide-tip-label">가이드 포인트</div><p>원도심의 겹이 가장 선명한 자리. 코스 전체 질문의 중간 점검 — "여기가 제일 아래일까? 아니다, 이 왜관을 다스린 곳은 따로 있다."</p></div>
+      <h4>부산타워</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>1973년 완공된 높이 120m의 전망탑으로, 남산서울타워보다 2년 앞서 준공됐다. 현재 자리는 일제강점기 용두산 신사가 있던 터로, 탑 뒤편 계단에 신사 기단 흔적이 남아있다. 등록 명칭은 '부산타워'이며, 2021년 리뉴얼 이후 '다이아몬드 타워'라는 브랜드명이 함께 쓰인다.</p></div>
+      <h4>초량왜관 — 이 터 아래의 층</h4>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>임진왜란 후 국교가 회복되며 부산에 다시 왜관이 설치됐고, 두모포왜관(1607)을 거쳐 1678년 지금의 중구 광복동 일대로 옮겨온 것이 초량왜관이다. 약 10만 평 규모로, 이 용두산을 경계로 동관과 서관으로 나뉘었다. 조선 인삼·중국 비단·일본 은이 오가는 중계무역지였다. 1876년 개항 이후 일본이 이 자리를 일본전관거류지로 전환하며 왜관은 약 200년 만에 폐지됐다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>왜관은 조선 경상도의 지방관청인 동래부 관할이었다. 동래부사는 통역관인 훈도·별차를 통해 왜관 측과 교섭했고, 조선의 요구에 왜관이 응하지 않으면 생필품 지급이나 개시(정기 무역)를 중단하는 방식으로 통제했다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>지금의 용두산공원·BIFF광장·국제시장·자갈치시장·백산기념관 일대가 대부분 옛 초량왜관 부지 위에 있다는 설명이 있다. 오늘 오후 걷는 길 전체가 왜관 터 위라는 것. 1783년 화원 변박이 그린 〈왜관도〉에는 왜관 건물 56동이 그려져 있다고 소개된다.</p></div>
+    <h4>산 이름의 변천 — 송현산, 용두산, 우남공원</h4><div class="src-row"><span class="src-tag src-lore">야사·설</span><p>'용두산'은 산의 모양이 용의 머리 같다 하여 붙었고, 그 용이 왜구로부터 부산을 지킨다는 의미가 담겼다고 전한다. 옛 이름은 송현산이었다(영문 위키백과).</p></div><div class="src-row"><span class="src-tag src-record">정사</span><p>1955년 공원 이름이 이승만 대통령의 호를 딴 '우남공원'으로 바뀌었다가, 1960년 4·19혁명으로 그가 물러난 뒤 원래 이름 용두산공원을 되찾았다(영문 위키백과). 공원에는 이순신 장군 동상이 있다.</p></div><div class="notice-inline">개칭·환원 연도는 영문 위키백과 1건 기준 ⚠️ — 국문 자료로 재확인 권장.</div></div></div>
+    <div id="bt-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>탑 뒤편 신사 기단 흔적 클로즈업 → 타워를 올려다보는 틸트업 (아래층 → 위층)</li>
+      <li>전망대에서 원도심·부산항 전경</li>
+    </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>신사 기단 흔적 클로즈업에서 타워로 틸트업 — "아래층에서 위층으로"</li></ul></div><div class="tip-sec"><h5>💰 비용 팁</h5><ul><li>전망대 요금 [확인 필요] — 공원 산책만은 무료</li></ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>용두산에서 내려와. 왜관 터 위에 피란민이 만든 층.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 정리형</span><span>“방금 본 핵심은 하나 — 이 산 밑에 세 겹이 있다.” → 보수동책방골목부터</span></div></div>
+    <div class="sch-header" onclick="toggleItem(this)">
+      <div class="sch-place"><span class="layer-badge">피란의 층</span>피란 시장 골목 — 보수동책방골목 · 국제시장 · 부평깡통시장 · BIFF광장</div>
+      <div class="sch-sub">용두산에서 내려와 도보로 잇는 남포동의 시장 골목. 왜관 터 위에 피란민이 만든 층. 점심은 이 구간에서 자유롭게.</div>
+      <div class="sch-badges"><span class="sch-badge">무료</span><span class="sch-badge">약 2시간(점심 포함)</span><span class="sch-badge">장보기: 어묵</span></div>
+      <div class="sch-toggle">▲</div>
+    </div>
+    <div class="sch-content open">
+    <div class="place-block">
+      <div class="place-title">남포동 시장 골목</div>
+      <div class="place-desc">책방골목·국제시장·깡통시장이 붙어 있고, 길 건너 BIFF광장으로 이어진다. 모두 1950년대 피란민이 빈 땅과 빈 상권을 채우며 만든 공간이다. 깡통시장에서 내일 조식용 어묵을 산다.</div>
+      <div class="place-route">동선: 보수동책방골목 → 국제시장 → 부평깡통시장(장보기) → BIFF광장</div>
+
+      <div class="spot-card">
+        <div class="spot-name">① 보수동책방골목</div>
+        <div class="spot-sub">약 450m 헌책방 골목.</div>
+        <div class="detail-btns">
+          <button class="detail-btn" onclick="toggleDetail(this,'bs-point')">💬 소재 카드</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'bs-history')">📜 이야기</button>
+        </div>
+        <div id="bs-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 세심함 — 헌책 제목·도장 디테일</div><div class="sc"><div class="sc-t">사과 궤짝 위 헌책에서 시작된 골목.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">골목 양옆으로 쌓인 헌책</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이 골목, 처음엔 서점이 아니라 사과 궤짝이었습니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">🎥 책 더미 사이 골목 트래킹</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">한국전쟁 피란민들이 국제시장 인근에서 사과 궤짝 위에 헌책을 올려 팔던 것이 시작이다. 피란민 학교가 들어서며 교과서 수요가 몰렸고, 미군부대 서적과 일본인이 남기고 간 책도 유입됐다. 1970년대 지금 규모(약 50여 곳, 약 450m)로 정리됐다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-15 보통 사람의 시선</span><span class="sc-tag">2-12 한 장소, 여러 시대</span></div></div><details class="spare"><summary>예비 카드 1장 — 시간·반응 보고 골라 쓰기</summary><div class="sc"><div class="sc-t">이 골목의 첫 책방은 처마 밑 박스 한 장이었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">골목 입구 사거리</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“1950년, 함경도에서 피란 온 부부가 이 골목 입구 처마 밑에 박스 한 장을 깔았습니다. 그게 첫 책방이에요.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">손정린 씨 부부가 미군부대 헌 잡지·만화책과 고물상 헌책으로 노점을 열었다. 1970년대 70여 곳까지 늘었다가 지금은 20~30곳 안팎이다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-15 보통 사람의 시선</span><span class="sc-tag">2-16 최초·최대·유일</span><span class="sc-tag">2-23 변화와 개선</span></div></div></details></div></div>
+        <div id="bs-history" class="detail-body"><div class="detail-inner">
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>한국전쟁 피란민들이 국제시장 인근에서 사과 궤짝 위에 헌책을 올려 팔던 것이 시작이다. 피란민 학교가 들어서며 교과서 수요가 몰렸고, 미군부대에서 흘러나온 서적, 일본인이 남기고 간 책도 함께 유입됐다. 1970년대 현재 규모(약 50여 곳, 약 450m)로 정리됐다.</p></div>
+        <h4>처마 밑 박스 한 장에서</h4><div class="src-row"><span class="src-tag src-record">정사</span><p>1950년 함경북도에서 피란 온 손정린 씨 부부가 보수동 사거리 입구 목조 건물 처마 밑에 박스를 깔고, 미군부대에서 나온 헌 잡지·만화책과 고물상에서 모은 헌책으로 노점을 연 것이 골목의 시작으로 소개된다. 1970년대 전성기에는 약 70여 곳이었고, 지금은 20~30곳 안팎으로 줄었다(부산일보·연합뉴스 인용, busanhaps) ⚠️ 현재 수는 자료마다 다름.</p></div></div></div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-name">② ★ 국제시장</div>
+        <div class="spot-sub">6개 공구로 나뉜 만물시장.</div>
+        <div class="detail-btns">
+          <button class="detail-btn" onclick="toggleDetail(this,'gj-point')">💬 소재 카드</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'gj-history')">📜 이야기</button>
+        </div>
+        <div id="gj-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 칭찬을 잘함(오버) — 상인과의 인터랙션</div><div class="flow6"><div class="flow6-h">장소 흐름 — 6단계 (3-1)</div><table><tr><td class="n">1. 도입</td><td>“이 넓은 시장 땅, 원래 왜 비어 있었을까요?” <span class="mk">[여기서 질문]</span></td></tr><tr><td class="n">2. 사실</td><td>태평양전쟁 말기 폭격 대비 방화구역으로 건물을 헐어 비운 자리 → 광복 후 경매 노점 → 피란민과 구호물자로 확대.</td></tr><tr><td class="n">3. 예고</td><td>“두 가지만 봅니다. 빈 땅의 이유, 그리고 옛 별명.”</td></tr><tr><td class="n">4. 증거</td><td>공구로 나뉜 시장 골목(현장).</td></tr><tr><td class="n">5. 반박</td><td>“피란민이 처음 빈 땅을 찾아 만든 시장?” — 일제가 비워 둔 땅이었다.</td></tr><tr><td class="n">6. 마무리</td><td>“일제의 층이 비운 땅을, 피란의 층이 채웠습니다.”</td></tr></table><div class="ver"><span class="ver-k">30초</span><span>“이 시장 땅은 원래 일제가 폭격에 대비해 비운 자리였습니다. 그 빈 땅을 피란민이 채웠어요.”</span></div><div class="ver"><span class="ver-k">3분</span><span>도입 → 사실 → 반박 → 마무리. 도떼기시장 별명은 걸으면서.</span></div></div><div class="sc"><div class="sc-t">이 시장 땅은 폭격에 대비해 일부러 비워 둔 자리였다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">국제시장 골목</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“시장이 생기기 전 이 땅, 왜 비어 있었을까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 빈 땅의 이유 맞히기</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">일제강점기 이 일대는 태평양전쟁 말기 미군 폭격에 대비한 방화구역으로 건물이 철거되며 빈 공간이 됐다. 광복 후 일본인 귀환 때 압수된 물품이 경매로 풀리며 노점이 형성됐고, 한국전쟁으로 피란민과 구호물자·밀수품이 몰려 지금의 국제시장으로 커졌다.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“그래서 이 시장 옛 별명이 좀 특이합니다.”</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-2② 왜?② 안전</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-5 통념 뒤집기</span><span class="sc-tag">4-4 참여</span></div></div><div class="sc"><div class="sc-t">옛 별명 '도떼기시장' — 유래가 두 갈래다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">시장 골목의 북적임</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“'도떼기시장' 같다는 말, 들어 보셨어요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">'도떼기시장'이라는 옛 별칭은 일본어 '돗따(낙찰받았다)'에서 왔다는 설과, 물건을 도거리로 떼어 판다는 뜻에서 왔다는 설이 함께 전한다.</span></div><div class="sc-tags"><span class="sc-tag tr-yasa">야사·설</span><span class="sc-tag">2-21 이름과 실제의 반전</span><span class="sc-tag">2-3 이미 아는 것과 연결</span></div></div><details class="spare"><summary>예비 카드 1장 — 시간·반응 보고 골라 쓰기</summary><div class="sc"><div class="sc-t">영화 「국제시장」의 '꽃분이네'는 이 시장통 가게다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">시장 골목(꽃분이네 간판은 현장 확인)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“영화 '국제시장' 보신 분? <span class="mk">[여기서 질문]</span> 주인공이 끝까지 지키던 가게, '꽃분이네'가 이 시장 설정이었습니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 영화 본 사람 손들기</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">「국제시장」(윤제균 감독, 2014년 12월 17일 개봉)은 국제시장통 가게 꽃분이네를 중심으로 피란민 세대의 삶을 그렸다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag tr-field">현장 확인</span><span class="sc-tag">2-3 이미 아는 것과 연결</span><span class="sc-tag">2-17 나와 연결</span><span class="sc-tag">4-4 참여</span></div></div></details></div></div>
+        <div id="gj-history" class="detail-body"><div class="detail-inner">
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>일제강점기 이 일대는 태평양전쟁 말기 미군 폭격에 대비한 방화구역으로 건물이 철거되며 빈 공간이 됐다. 광복 후 일본인 귀환 시 압수된 물품이 경매로 풀리며 노점이 형성됐고, 한국전쟁으로 피란민과 구호물자·밀수품이 몰려들어 지금의 국제시장으로 확대됐다.</p></div>
+          <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>'도떼기시장'이라는 옛 별칭은 일본어 '돗따(낙찰받았다)'에서 유래했다는 설과, 물건을 도거리로 떼어 판다는 뜻에서 왔다는 설이 함께 전한다.</p></div>
+        <h4>영화 「국제시장」</h4><div class="src-row"><span class="src-tag src-record">정사</span><p>영화 「국제시장」(윤제균 감독)은 2014년 12월 17일 개봉했다. 국제시장통의 가게 '꽃분이네'를 주인공이 억척스럽게 지켜 내야 하는 공간으로 그렸다(서울신문 2014).</p></div><div class="notice-inline">실제 '꽃분이네' 간판 가게의 현재 영업 여부는 현장 확인 <span class="chk">[확인 필요]</span>.</div></div></div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-name">③ 부평깡통시장 — 장보기</div>
+        <div class="spot-sub">국제시장과 붙어 있는 시장. 내일 조식용 부산어묵 구매.</div>
+        <div class="detail-btns">
+          <button class="detail-btn" onclick="toggleDetail(this,'kt-point')">💬 소재 카드</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'kt-history')">📜 이야기</button>
+        <button class="detail-btn" onclick="toggleDetail(this,'kt-tip')">🎬 촬영·팁</button></div>
+        <div id="kt-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 호기심 노출 — 낮에 빈 매대 자리</div><div class="sc"><div class="sc-t">부산어묵이 유명해진 이유는 바로 옆 어시장이었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">어묵 가게 진열대</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“어묵 하면 부산이죠. 왜 하필 부산일까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 어묵탕용(두께감 있는 사각·꼬치형) 직접 고르기 — 내일 조식 재료<br>🎥 장보기 컷</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">1876년 개항과 함께 일본 음식인 오뎅·가마보코가 들어왔다. 1915년 부평시장 기록에 이미 어묵 점포 3곳이 있었고, 해방 후 한국인이 운영한 최초의 어묵공장이 부평동에 들어섰다. 부산공동어시장의 신선한 원료를 바로 쓸 수 있었던 점이 이유로 꼽힌다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 깡통시장은 왜 깡통이에요? → 미군 통조림(깡통) 물자가 많이 거래돼 붙었다고 흔히 전해진다 — 확인 안 된 유래라 단정하지 않는다.</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">어묵은 숙소 냉장 보관.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag tr-yasa">야사·설</span><span class="sc-tag act">활동</span><span class="sc-tag">2-2① 왜?① 자연</span><span class="sc-tag">2-3 이미 아는 것과 연결</span><span class="sc-tag">2-12 한 장소, 여러 시대</span></div></div><details class="spare"><summary>예비 카드 1장 — 시간·반응 보고 골라 쓰기</summary><div class="sc"><div class="sc-t">우리나라 첫 상설 야시장이 이 시장에서 시작됐다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">야시장 매대 자리(낮에는 비어 있음)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“지금은 낮이라 비어 있지만, 저녁 7시 반이면 여기 매대가 깔립니다. 2013년, 전국에서 처음 생긴 상설 야시장이에요.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">2013년 대만 야시장을 벤치마킹해 개장했고, 평일 2,500명·주말 7,500명이 찾는다고 2019년 보도됐다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-16 최초·최대·유일</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">4-2 숫자 체감</span></div></div></details></div></div>
+        <div id="kt-history" class="detail-body"><div class="detail-inner">
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>1876년 부산 개항과 함께 일본 음식인 오뎅·가마보코가 들어왔다. 1915년 부평시장 기록에 이미 어묵 점포 3곳이 있었고, 해방 후 한국인이 운영한 최초의 어묵공장이 부평동에 들어섰다. 부산공동어시장에서 나오는 신선한 원료를 바로 쓸 수 있었던 점이 부산어묵을 어묵의 대명사로 만든 이유로 꼽힌다.</p></div>
+          <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>'깡통시장'이라는 이름은 한국전쟁 이후 미군 통조림(깡통) 물자가 많이 거래된 데서 붙었다고 흔히 전해진다 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+        <h4>전국 첫 상설 야시장</h4><div class="src-row"><span class="src-tag src-record">정사</span><p>부평깡통시장은 대만 등 중화권 야시장을 벤치마킹해 2013년 전국 최초의 상설 야시장을 열었다. 설·추석 연휴를 빼고 매일 오후 7시 30분부터 자정까지 열리며, 평일 약 2,500명, 주말 약 7,500명이 찾는다고 소개됐다(서울신문 2019).</p></div><div class="notice-inline">이 코스는 오후에 들르므로 야시장 시간과 맞지 않는다. 운영 시간은 2019년 기사 기준 — 최신 확인 <span class="chk">[확인 필요]</span>.</div></div></div><div id="kt-tip" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>⏱ 시간·우선순위 팁</h5><ul><li>야시장은 19:30부터로 소개(2019년) — 오후 방문이면 매대가 없다</li></ul></div></div></div>
+      </div>
+
+      <div class="spot-card">
+        <div class="spot-name">④ BIFF광장</div>
+        <div class="spot-sub">부산국제영화제 발상지. 피란 예술인들의 다방 거리.</div>
+        <div class="detail-btns">
+          <button class="detail-btn" onclick="toggleDetail(this,'biff-point')">💬 소재 카드</button>
+          <button class="detail-btn" onclick="toggleDetail(this,'biff-history')">📜 이야기</button>
+        </div>
+        <div id="biff-point" class="detail-body"><div class="detail-inner"><div class="sc"><div class="sc-t">영화제 거리 아래층엔 피란 예술인들의 다방이 있었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">바닥의 영화인 핸드프린팅</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“1996년 영화제가 시작된 거리. 그런데 그보다 40여 년 전, 이 근처 다방엔 피란 온 화가와 소설가들이 모였습니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 핸드프린팅에서 아는 이름 찾기<br>🎥 씨앗호떡 등 노점 간식 타임</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">남포동 일대는 일제강점기 매축공사로 조성된 시가지로 해방 후 극장가가 됐고, 1996년 부산국제영화제 창설을 계기로 'BIFF광장'이 됐다. 전쟁 중 광복동·남포동·동광동 다방(밀다원·금강 등)은 피란 예술인의 공간이었다. 화가 이중섭은 이 시기 부산에서 담뱃갑 은박지에 그리는 '은지화'를 만들었다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-3 이미 아는 것과 연결</span><span class="sc-tag">4-4 참여</span></div></div></div></div>
+        <div id="biff-history" class="detail-body"><div class="detail-inner">
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>남포동 일대는 일제강점기 매축공사로 조성된 시가지로, 해방 이후 극장가로 발전했다. 1996년 부산국제영화제 창설을 계기로 이 거리가 'BIFF광장'이 됐고, 바닥에 영화인 핸드프린팅이 있다.</p></div>
+          <div class="src-row"><span class="src-tag src-record">정사</span><p>전쟁 중 광복동·남포동·동광동 일대 다방(밀다원·금강 등)은 피란 예술인들의 전시회·출판기념회·시 낭독회 공간이었다. 화가 이중섭은 이 시기 부산에서 담뱃갑 은박지에 그리는 '은지화'를 만들어냈고, 소설가 김동리는 부산 피란 경험으로 「밀다원시대」를 썼다.</p></div>
+        </div></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>BIFF광장에서 걸어서. 2일차의 마지막 자리.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 정리형</span><span>“오늘의 핵심 — 왜관을 다스린 곳은 원도심 밖에 있다.” → 남포동 숙소</span></div></div>
+    <div class="sch-place"><span class="layer-badge">피란의 층</span>★ 자갈치시장 · 남포동 건어물도매시장 — 장보기와 저녁</div>
+    <div class="sch-sub">BIFF광장에서 도보 이동. 내일 조식용 멸치·기장미역·다시마를 사고, 시장 골목에서 저녁. 2일차의 마지막 자리.</div>
+    <div class="sch-badges"><span class="sch-badge">저녁 1인 1.5~3만원 <span class="chk">[확인 필요]</span></span><span class="sch-badge">약 90분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'jg-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'jg-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'jg-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'jg-shot')">🎬 촬영·팁</button>
+    <button class="detail-btn" onclick="toggleDetail(this,'jg-roman')">🌙 낭만</button></div>
+    <div id="jg-info" class="detail-body"><div class="detail-inner">
+      <table class="cost-table">
+        <tr><th>자갈치시장</th><td>부산 대표 수산시장, 옥상 전망대</td></tr>
+        <tr><th>건어물도매시장</th><td>자갈치시장에서 도보 약 5분, 200여 점포 (요리 파일 기준)</td></tr>
+        <tr><th>장볼 것</th><td>국물멸치(육수용) · 볶음용 잔멸치 · 기장미역 · 기장다시마</td></tr>
+        <tr><th>고르는 법</th><td>육수용은 크고 배 부분이 노르스름한 것, 볶음용은 은빛이 살아있고 부서지지 않은 것. 미역·다시마는 색이 짙고 바삭하게 마른 것</td></tr>
+      </table>
+    </div></div>
+    <div id="jg-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 칭찬 오버 · 로컬음식 — 좌판 상인과 짧게</div><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“자갈치는 원래 자갈 해변이었습니다. 내일 아침 재료를 사고, 오늘 하루를 정리합니다.”</span></div></div><div class="sc"><div class="sc-t">'자갈치'는 원래 자갈 해변이었다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">시장 앞 바다와 매축된 땅</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“자갈치, 이름에 뭐가 들어 있어요? <span class="mk">[여기서 질문]</span> 자갈. 원래 자갈 해변이었습니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">자갈치시장 자리는 원래 '남빈'이라 불리던 자갈 해변이었다. 1930년대 남빈매축 공사로 생긴 땅 위에 영세어민들이 노점을 차린 것이 기원이다. 광복 후 귀환 동포와 피란민이 몰리며 커졌고, 남편을 잃은 여성들이 난전으로 생계를 이으며 '자갈치아지매'라는 상징이 생겼다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. '치'는 뭐예요? → 자갈밭에 장소를 뜻하는 '처(處)'가 사투리로 '치'가 됐다는 설이 널리 퍼져 있고, 물고기 이름에서 왔다는 설도 함께 전한다(야사·설).</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag tr-yasa">야사·설</span><span class="sc-tag">2-21 이름과 실제의 반전</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-15 보통 사람의 시선</span></div></div><div class="sc"><div class="sc-t">"국물용이요, 볶음용이요?" — 용도를 말하면 상인이 골라 준다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">건어물도매시장 멸치·미역 진열대</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“내일 아침 미역국이랑 계란찜 할 거예요. 국물용 멸치 하나, 볶음용 하나요.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 상인과 짧은 대화로 재료 사기 (관계형 낭만)<br>🎥 장바구니 리액션</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">기장·송정 앞바다는 한류·난류가 교차하는 해역으로, 기장미역은 잎이 두텁고 조리해도 잘 풀어지지 않는다고 소개된다. 기장군 다시마는 국가 지리적표시제에 등록돼 있다. 육수용 멸치는 크고 배가 노르스름한 것, 볶음용은 은빛이 살아 있고 부서지지 않은 것.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-15 보통 사람의 시선</span><span class="sc-tag">4-4 참여</span></div></div><div class="qc"><div class="qc-k">질문 카드 · 2일차 정리</div><div class="qc-say">“오늘 하루, 바닷가의 지금 층(북항)에서 시작해 일제강점기 건물, 그 아래 왜관 터, 그리고 그 위에 피란민이 세운 시장까지 걸었습니다. 그런데 이 원도심의 가장 아래층은 원도심 안에 없습니다. 내일 아침, 지하철 타고 거기로 갑니다.”</div><div class="qc-note">고정 클로징 인사 없음. 오늘 산 재료는 숙소 냉장.</div></div></div></div>
+    <div id="jg-history" class="detail-body"><div class="detail-inner">
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>자갈치시장 자리는 원래 '남빈'이라 불리던 자갈 해변이었다. 1930년대 남빈매축 공사를 거치며 영세어민들이 매축지 위에 노점을 차린 것이 시장의 기원이다. 광복 이후 귀환 동포와 한국전쟁 피란민들이 생계를 위해 몰려들며 크게 발전했고, 남편을 잃은 여성들이 난전으로 생계를 이으며 '자갈치아지매'라는 상징이 생겼다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>'자갈치'라는 이름은 자갈밭에 장소를 뜻하는 '처(處)'가 사투리로 '치'가 됐다는 설이 가장 널리 퍼져 있으나, 물고기 이름에서 비롯됐다는 설도 함께 전한다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>기장·송정 앞바다는 한류·난류가 교차하는 해역으로, 기장미역은 잎이 두텁고 조리해도 잘 풀어지지 않는다고 소개된다. 기장군 다시마는 국가 지리적표시제에 등록돼 있다.</p></div>
+    </div></div>
+    <div id="jg-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>좌판의 활어·해산물 클로즈업 / 건어물 진열대 / 장바구니 든 리액션 컷</li>
+      <li>자갈치 옥상에서 남항 야경</li>
+    </ul></div><div class="tip-sec"><h5>🚗 이동 팁</h5><ul><li>건어물도매시장은 자갈치에서 도보 약 5분</li></ul></div></div></div><div id="jg-roman" class="detail-body"><div class="detail-inner"><div class="roman-card"><span class="rc-type">소비형</span><table><tr><th>언제</th><td>장보기 뒤 해 질 녘</td></tr><tr><th>무엇을</th><td>자갈치 옥상에서 남항 야경 보기</td></tr><tr><th>찍는 법</th><td>야경 와이드 → 장바구니 든 실루엣</td></tr></table></div><div class="notice-inline">낭만 장면은 설명·나레이션 없이 행동과 분위기로만 전달한다(현장음·BGM). 효율보다 "굳이 해 보는 것"이 포인트.</div></div></div>
+  </div>
+
+  <!-- ================= 3일차 ================= -->
+  <div class="day-header">
+    <div class="d-label">DAY 3 · 목요일</div>
+    <div class="d-title">동래 — 가장 아래층, 원도심이 생기기 전의 부산</div>
+    <div class="d-sub">숙소 조식 요리여행 → 도시철도 1·4호선 → 점심에 코스 종료 · 오후 대구로 이동</div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>어제 깡통시장·건어물시장에서 산 재료로.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“아침 먹고 지하철로, 원도심이 생기기 전의 부산으로 갑니다.” → 도시철도</span></div></div>
+    <div class="sch-place">조식 요리여행 — 냄비 하나로 차리는 부산</div>
+    <div class="sch-sub">어제 깡통시장·건어물시장에서 산 재료로. 화구 1구 + 냄비 1개 + 전자레인지 기준, 조리 시간 짧은 메뉴만.</div>
+    <div class="sch-badges"><span class="sch-badge">메뉴 3가지 · 합계 약 40분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'ck-recipe')">🍳 레시피</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ck-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'ck-list')">🧺 준비물</button>
+    </div>
+    <div id="ck-recipe" class="detail-body"><div class="detail-inner">
+      <div class="recipe">
+        <div class="recipe-name">🍢 부산어묵탕 <span class="recipe-meta">· 15분 · 메인</span></div><div class="ck-meta" style="margin:6px 0 8px;padding:6px 9px;border-radius:6px;background:rgba(127,127,127,.10);font-size:.86em;line-height:1.55"><strong>요리법 파일 r154</strong> · 장비 A(화구+냄비) · 도구: 냄비 1개 · 인원 S○ M○ L△ · 냄새 약 · 기름 안 씀</div>
+        <ol><li>냄비에 물과 다시마 한 조각을 넣고 끓으면 다시마를 건진다.</li><li>어묵을 썰어 넣고 대파(현지구매)를 넣는다.</li><li>간장으로 간, 후추 한 꼬집으로 마무리.</li></ol><div class="ck-meta" style="margin:6px 0 8px;padding:6px 9px;border-radius:6px;background:rgba(127,127,127,.10);font-size:.86em;line-height:1.55"><strong>👥 인원 전환(촬영팀 S 기준):</strong> 냄비 크기만 허락하면 양 늘리기가 가장 쉬운 종류. 9인 이상은 큰 냄비(펜션 비치 여부 확인) 또는 두 냄비 분할.</div>
+      </div>
+      <div class="recipe">
+        <div class="recipe-name">🥣 기장미역국 <span class="recipe-meta">· 15분</span></div><div class="ck-meta" style="margin:6px 0 8px;padding:6px 9px;border-radius:6px;background:rgba(127,127,127,.10);font-size:.86em;line-height:1.55"><strong>요리법 파일 r157</strong> · 장비 A(화구+냄비) · 도구: 냄비 1개 · 인원 S○ M○ L△ · 냄새 보통 · 기름 안 씀</div>
+        <ol><li>마른 미역을 물에 불린다(전자레인지로 데운 물이면 빨리 불어남).</li><li>참기름에 미역을 살짝 볶고 물을 붓는다.</li><li>간장·다진 통마늘로 간해 끓이고 깨소금으로 마무리. 계란을 풀어 넣으면 든든해진다.</li></ol><div class="ck-meta" style="margin:6px 0 8px;padding:6px 9px;border-radius:6px;background:rgba(127,127,127,.10);font-size:.86em;line-height:1.55"><strong>👥 인원 전환(촬영팀 S 기준):</strong> 냄비 크기만 허락하면 양 늘리기가 가장 쉬운 종류. 9인 이상은 큰 냄비(펜션 비치 여부 확인) 또는 두 냄비 분할.</div>
+      </div>
+      <div class="recipe">
+        <div class="recipe-name">🍳 멸치계란찜 <span class="recipe-meta">· 10분 · 중탕</span></div><div class="ck-meta" style="margin:6px 0 8px;padding:6px 9px;border-radius:6px;background:rgba(127,127,127,.10);font-size:.86em;line-height:1.55"><strong>요리법 파일 r159</strong> · 장비 A(화구+냄비) · 도구: 냄비 1개 · 인원 S○ M△ L✕ · 냄새 강 · 기름 안 씀 — 냄새가 객실에 오래 남는다(요리법 파일): 조리 후 환기</div>
+        <ol><li>계란을 풀고 볶음용 멸치를 잘게 부숴 넣는다.</li><li>그릇째 냄비에 넣고 물을 살짝 부어 뚜껑 덮고 8분 찐다.</li><li>참기름·깨소금으로 마무리.</li></ol><div class="ck-meta" style="margin:6px 0 8px;padding:6px 9px;border-radius:6px;background:rgba(127,127,127,.10);font-size:.86em;line-height:1.55"><strong>👥 인원 전환(촬영팀 S 기준):</strong> 계란찜은 그릇 수만큼 중탕 공간이 필요 — 대량은 큰 그릇 하나에 오래 찌거나 구운란 대체.<br><strong>🥡 남은 소스로 대체:</strong> 양념소금 (소금+후추) — 레시피의 소금·후추 자리에 양념소금(후추는 생략)</div>
+      </div>
+      <div class="notice-inline">냄비가 하나라 순서가 중요: 계란찜(중탕) → 미역국 → 어묵탕. 즉석밥은 전자레인지.</div>
+    </div></div>
+    <div id="ck-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 조급증 자조 — 냄비 하나로 다 하려다 허둥</div><div class="qc"><div class="qc-k">질문 카드 · 하루 시작 (3-6 복습 콜백 · 3-7)</div><div class="or-row"><span class="or-k">어제 복습</span><span>“어제 용두산에서 세 겹을 봤죠. 그리고 그 왜관을 다스린 곳은 따로 있다고 했습니다.”</span></div><div class="or-row"><span class="or-k">오늘 동선</span><span>“아침 먹고 지하철로 동래. 역사관, 동헌, 충렬사를 보고 파전으로 끝납니다.”</span></div><div class="or-row"><span class="or-k">안전·규칙</span><span>“오늘은 지하철 환승이 있습니다. 역사관은 지하철역 안이에요.”</span></div></div><div class="sc"><div class="sc-t">아침상에도 원도심의 겹이 있다 — 어묵은 개항과 함께 들어왔다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">냄비 속 어묵탕</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“계획은 세 가지인데 냄비는 하나예요. 이러다 다 식는데 말이죠.” → “이 어묵, 1876년 개항과 함께 들어와 피란 시절을 거쳐 부산의 맛이 됐습니다.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">🎥 냄비 하나로 허둥대는 장면 — 조급증 자조 트레잇</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">1876년 개항과 함께 일본 음식 오뎅·가마보코가 들어왔고, 1915년 부평시장 기록에 어묵 점포가 있었다(어제 깡통시장 카드).</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">4-10 유머</span></div></div></div></div>
+    <div id="ck-list" class="detail-body"><div class="detail-inner"><ul>
+      <li><strong>여행요리키트(집에서):</strong> 간장 · 설탕 · 통마늘 · 후추 · 깨소금 · 참기름 · 고춧가루</li>
+      <li><strong>2일차 시장 구매:</strong> 부산어묵(부평깡통시장), 국물멸치·볶음용 멸치·기장미역·기장다시마(건어물도매시장)</li>
+      <li><strong>현지 마트:</strong> 계란 · 대파 · 즉석밥</li>
+      <li><strong>도구:</strong> 냄비 1개, 국자, 그릇(중탕용), 나무젓가락</li>
+    <li><strong>공통 도구:</strong> 지퍼백(대·중), 키친타월, 일회용 장갑, 가위, 숟가락·젓가락, 쓰레기봉투, 물티슈</li><li><strong>소금:</strong> 키트 7종에 소금이 없다 — 소금 소포장 또는 배달 양념소금 봉지</li><li><strong>남은 배달 소스(미개봉 일회용만, 냉장 표시는 보냉백):</strong> 양념소금 (소금+후추)</li><li><strong>보관:</strong> 전날 산 생물은 객실 냉장고, 작으면 보냉백 + 편의점 얼음컵</li></ul></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>숙소에서 지하철로.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“내리는 역 안에 박물관이 있습니다.” → 동래읍성임진왜란역사관</span></div></div>
+    <div class="sch-place">이동 — 도시철도 1호선 → 4호선, 동래로</div>
+    <div class="sch-sub">남포동에서 1호선 북쪽 방면 → 동래역 환승 → 4호선 수안역. 정확한 환승·소요시간 <span><span class="chk">[확인 필요]</span></span>.</div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'mv2-point')">💬 소재 카드</button>
+    </div>
+    <div id="mv2-point" class="detail-body"><div class="detail-inner"><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“어제까지 걸은 곳이 개항 이후의 부산이라면, 지금 가는 곳은 그 전의 부산입니다. 남포동과 동래가 1호선 한 줄로 이어져 있어요.”</span></div></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>남포동에서 1호선 → 4호선. 원도심이 생기기 전의 부산으로.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“이 근처에, 어제 용두산에서 말한 그 관청이 있습니다.” → 동래부 동헌</span></div></div>
+    <div class="sch-place"><span class="layer-badge">가장 아래층</span>★ 동래읍성임진왜란역사관</div>
+    <div class="sch-sub">도시철도 4호선 수안역 안. 지하철 공사장에서 나온 1592년 동래성 전투의 흔적.</div>
+    <div class="sch-badges"><span class="sch-badge">운영시간·요금 <span class="chk">[확인 필요]</span></span><span class="sch-badge">약 30분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'im-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'im-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'im-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'im-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="im-info" class="detail-body"><div class="detail-inner"><ul>
+      <li>부산 동래구 충렬대로 223 (도시철도 4호선 수안역 1층)</li>
+      <li>2011년 1월 개관. 동래읍성 해자에서 출토된 인골·무기류 전시</li>
+    </ul></div></div>
+    <div id="im-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 아빠감성 — 출토 인골 앞에서 진중하게</div><div class="flow6"><div class="flow6-h">장소 흐름 — 6단계 (3-1)</div><table><tr><td class="n">1. 도입</td><td>“지하철을 놓으려고 땅을 팠더니, 맨 아래에서 뭐가 나왔을까요?” <span class="mk">[여기서 질문]</span></td></tr><tr><td class="n">2. 사실</td><td>2005년 4호선 수안역 공사 중 동래읍성 해자에서 1592년 전투 때 숨진 이들의 인골·무기 출토. 2011년 역사관 개관.</td></tr><tr><td class="n">3. 예고</td><td>“두 가지만 봅니다. 땅에서 나온 것, 그리고 한 문장.”</td></tr><tr><td class="n">4. 증거</td><td>출토 무기류 전시(촬영 범위 현장 확인).</td></tr><tr><td class="n">5. 반박</td><td>“동래성이 첫 전투지?” — 부산진성이 하루 먼저 함락됐다. '초기 전투지'가 정확하다.</td></tr><tr><td class="n">6. 마무리</td><td><span class="mk">[천천히]</span> 戰死易 假道難 — “사흘 동안 말로 쌓아 온 층이, 여기서 실제로 땅속에서 나왔습니다.”</td></tr></table><div class="ver"><span class="ver-k">30초</span><span>“지하철 공사장 맨 아래층에서 1592년이 나왔습니다. 사흘 동안 말한 '겹'이, 여기선 진짜 땅속의 층입니다.”</span></div><div class="ver"><span class="ver-k">3분</span><span>도입 → 사실 → 반박(초기 전투지) → 마무리(한 문장). 인골 이야기는 진중하게 짧게.</span></div></div><div class="sc"><div class="sc-t">지하철역 공사장 맨 아래층에서 1592년이 나왔다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">개찰구 옆 전시실, 출토 유물</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“여기 지하철역입니다. 이 역을 만들다가 무엇이 나왔을까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">🎥 개찰구 → 전시실 '지하철역 안 박물관' 전환 컷</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">2005년 도시철도 4호선 수안역 공사 중 동래읍성 해자 자리에서 1592년 동래성 전투 때 숨진 이들의 인골과 무기류가 무더기로 출토됐다. 부산시는 역사 안에 역사관을 조성해 2011년 1월 개관했다.</span></div><div class="sc-row"><span class="sc-k">예상 질문</span><span style="flex:1">Q. 누구 뼈예요? → 칼·창에 다친 흔적이 있는 뼈와 여성·어린아이의 뼈도 있었다고 소개되나, 발굴 보고서 원문으로는 확인하지 못했다(야사·설로 완곡하게).</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">희생자의 유해다. 리액션·유머 금지, 촬영 허용 범위 현장 확인(6-7).</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-4 바로 여기의 현장성</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-14 유물이 겪은 운명</span></div></div><div class="sc"><div class="sc-t">"싸워 죽기는 쉬워도 길을 빌려주기는 어렵다."</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">전시의 송상현 문답 패널(현장 확인)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“적장이 말합니다. 싸우기 싫으면 길을 비켜라. 동래부사의 답. <span class="mk">[천천히]</span> 전사이 가도난. <span class="mk">[침묵]</span>”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">고니시 유키나가가 '싸우고 싶으면 싸우고, 싫으면 길을 빌려 달라'고 하자, 동래부사 송상현은 '싸워 죽기는 쉬워도 길을 빌려주기는 어렵다(戰死易 假道難)'고 답한 것으로 기록돼 있다. 戰 싸울 전, 死 죽을 사, 易 쉬울 이, 假 빌릴 가, 道 길 도, 難 어려울 난. 동래읍성은 1592년 음력 4월 15일 하루 만에 함락됐다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-6 인물의 감정·동기</span><span class="sc-tag">2-10 생존·전쟁의 긴장</span><span class="sc-tag">4-8 한자 풀이</span><span class="sc-tag">4-3 언어 리듬·타이밍</span></div></div><div class="sc"><div class="sc-t">동래성은 '첫 전투지'가 아니라 '초기 전투지'다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">전시의 전투 날짜</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“흔히 여기가 임진왜란 첫 전투지라고들 하는데요, 정확하진 않습니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">부산진성이 4월 14일 먼저 함락되고, 동래성은 다음 날 함락됐다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-5 통념 뒤집기</span></div></div></div></div>
+    <div id="im-history" class="detail-body"><div class="detail-inner"><div class="guide-tip"><div class="guide-tip-label">가이드 포인트</div><p>코스에서 가장 무거운 장소. 바로 다음 동헌은 "어제 복선의 답"이라는 발견의 톤으로 올린다(3-5).</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>2005년 도시철도 4호선 수안역 공사 중 동래읍성 해자 자리에서 1592년 동래성 전투 때 숨진 이들의 인골과 무기류가 무더기로 출토됐다. 부산시는 이 발굴을 기려 역사 안에 역사관을 조성해 2011년 1월 개관했다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>고니시 유키나가가 '싸우고 싶으면 싸우고, 싫으면 길을 빌려 달라'고 하자, 동래부사 송상현은 '싸워 죽기는 쉬워도 길을 빌려주기는 어렵다(戰死易 假道難)'고 답한 것으로 기록돼 있다. 동래읍성은 1592년 음력 4월 15일 하루 만에 함락됐다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>출토 인골 가운데 칼·창에 다친 흔적이 있는 뼈와 여성·어린아이의 뼈도 있었다고 소개된다. 발굴 보고서 원문으로는 확인하지 못했다 <span><span class="chk">[확인 필요]</span></span>.</p></div>
+    </div></div>
+    <div id="im-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>개찰구 → 전시실로 이어지는 '지하철역 안 박물관' 전환 컷</li>
+      <li>출토 유물 전시 (촬영 허용 범위 현장 확인)</li>
+    </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>개찰구에서 전시실로 이어지는 전환 컷 — 촬영 허용 범위 현장 확인</li></ul></div><div class="tip-sec"><h5>🚗 이동 팁</h5><ul><li>도시철도 4호선 수안역 1층 — 역에서 바로</li></ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>역사관의 무거운 톤에서, 어제 복선의 답을 찾는 발견의 톤으로(3-5).</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“동래성에서 숨진 사람들을 기억하는 사당으로 갑니다.” → 충렬사</span></div></div>
+    <div class="sch-place"><span class="layer-badge">가장 아래층</span>동래부 동헌 (신규 조사 스팟)</div>
+    <div class="sch-sub">수안역 인근 수안동. 조선 시대 동래부사가 정무를 보던 관아 건물. 원래 부산의 '중심'이 있던 자리.</div>
+    <div class="sch-badges"><span class="sch-badge">관람 가능 여부 <span class="chk">[확인 필요]</span></span><span class="sch-badge">약 20분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'dh-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'dh-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'dh-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'dh-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="dh-info" class="detail-body"><div class="detail-inner"><ul>
+      <li>부산 동래구 수안동 421-56 일대 (2003년 논문 기재 지번)</li>
+      <li>정식 명칭·지정 현황·개방 시간·내부 관람 여부 <span><span class="chk">[확인 필요]</span></span> — 촬영 전 지도 검색과 현장 확인 필수</li>
+    </ul></div></div>
+    <div id="dh-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 정직함 — 확인 못 한 건 "확인 못 했다"</div><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“어제 용두산에서 왜관을 감독하던 관청은 동래에 있었다고 했죠. 바로 여기입니다. 초량도, 남포동 왜관도 이 관아가 다스렸습니다.”</span></div></div><div class="qc"><div class="qc-k">질문 카드 · 결정적 단서</div><div class="qc-say">“어제 용두산에서 말씀드렸죠. 왜관을 감독하던 관청은 거기가 아니라 동래에 있었다고. 바로 여기입니다. 첫날 부산역 앞 초량도, 조선 시대엔 이 고을 사천면의 마을이었어요.”</div><div class="qc-note">1일차 남선창고 터·2일차 용두산·근현대역사관에서 깐 복선을 한 번에 회수. 전체 질문의 답은 파전거리에서 말로 정리한다.</div></div><div class="sc"><div class="sc-t">왜관을 감독하던 관청이 바로 이 자리다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">동래부 동헌 건물(관람 가능 여부 확인 후)</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이 건물, 무엇을 하던 곳일까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">🎥 관아 정면 + 주변 도심 빌딩 대비</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">명종 2년(1547) 동래현이 동래도호부로 승격됐다. 동래부사는 일본과의 외교·무역을 담당했고 왜관 업무는 동래부 관할이었다. 조선 후기 동래도호부 관할 7개 면 가운데 사천면에 지금의 원도심인 초량 일대가 속했다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-4 바로 여기의 현장성</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-11 서열·위계</span></div></div><div class="sc"><div class="sc-t">일본인 손님에게 위엄을 보이려 다른 고을보다 크게 지었다는 관아.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">동헌 건물 규모</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“다른 고을 관아보다 크게 지었다는 설명이 있습니다. 왜일까요?”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">동래부사가 정무를 보는 관아는 자주 왕래하는 일본인들에게 위엄을 보이기 위해 다른 고을보다 크게 지었다는 설명이 있다. 1914년 부산부가 개항장 일대로 축소되고 나머지가 동래군으로 분리된 뒤, 동래군청이 이 관아를 그대로 썼다는 설명도 있다(단일 출처 ⚠️). 1942년 동래읍이 부산부에 편입됐다.</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">관람 가능 여부·정식 명칭은 촬영 전 확인.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag tr-check">확인 필요</span><span class="sc-tag">2-2③ 왜?③ 다스림</span><span class="sc-tag">2-11 서열·위계</span></div></div></div></div>
+    <div id="dh-history" class="detail-body"><div class="detail-inner">
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>명종 2년(1547) 동래현이 동래도호부로 승격됐다. 조선 후기 동래도호부 관할은 읍내면·동면·남촌면·동평면·사천면·남면·북면의 7개 면으로, 지금의 원도심인 초량 일대도 사천면에 속했다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>동래부사는 일본과의 외교·무역을 담당했고, 왜관 업무는 동래부 관할이었다. 동래부사가 정무를 보는 관아는 자주 왕래하는 일본인들에게 위엄을 보이기 위해 다른 고을보다 크게 지었다는 설명이 있다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>1914년 부산부의 영역이 개항장 일대로 축소되고 나머지가 동래군으로 분리됐으며, 1942년 동래읍이 부산부에 편입됐다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>1914년 이후 동래군청은 기존 동래부 관아(동헌)를 그대로 사용했다는 설명이 있다(위키 계열 자료, 단일 출처 ⚠️).</p></div>
+    </div></div>
+    <div id="dh-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>관아 건물 정면 + 주변 도심 빌딩 대비 (현장 확인 후)</li>
+    </ul></div><div class="tip-sec"><h5>⏱ 시간·우선순위 팁</h5><ul><li>개방 여부 사전 확인 필수 — 닫혀 있으면 외관만</li></ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>동헌에서 4호선 한 정거장. 역사관과 짝을 이루는 기억의 장소.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 예고형</span><span>“파전 골목 입구에 400년 된 나무가 있습니다. 찾아보세요.” → 동래파전거리</span></div></div>
+    <div class="sch-place">충렬사</div>
+    <div class="sch-sub">도시철도 4호선 충렬사역 1번 출구 도보 1분. 송상현·정발 등 임진왜란 순절자 93위를 모신 사당.</div>
+    <div class="sch-badges"><span class="sch-badge">운영시간 <span class="chk">[확인 필요]</span></span><span class="sch-badge">약 30분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'cr-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'cr-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'cr-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'cr-shot')">🎬 촬영·팁</button>
+    </div>
+    <div id="cr-info" class="detail-body"><div class="detail-inner"><ul>
+      <li>부산 동래구 충렬대로 345 (안락동)</li>
+      <li>경역 9만 5,804㎡, 본전 외 15동</li>
+      <li>매년 5월 25일 제향 (동래성 함락일 음력 4월 15일 환산)</li>
+    </ul></div></div>
+    <div id="cr-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 아빠감성</div><div class="flow6"><div class="ver"><span class="ver-k">30초</span><span>“역사관이 땅에서 나온 '발굴'이라면, 이곳은 사람들이 남긴 '기억'입니다.”</span></div></div><div class="sc"><div class="sc-t">같은 사건을 두 방식으로 — 땅속의 발굴, 사당의 기억.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">본전과 위패</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“아까 역사관에서 본 그날의 사람들, 여기 위패로 모셔져 있습니다.”</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">1605년 동래부사 윤훤이 동래읍성 남문 안에 송상현을 기리는 송공사를 세운 것이 시작이다. 1624년 '충렬사' 사액을 받았고, 1652년 지금 자리로 옮겼다. 송상현과 부산진첨사 정발을 비롯해 임진왜란 때 순절한 93위의 위패를 모신다. 매년 5월 25일 제향.</span></div><div class="sc-row"><span class="sc-k">꼬리</span><span style="flex:1">“이제 마지막 자리. 동래가 왜 파전으로 유명한지 들으러 갑니다.”</span></div><div class="sc-row"><span class="sc-k">주의</span><span style="flex:1">참배 공간 — 경건하게, 짧게.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag">2-12 한 장소, 여러 시대</span><span class="sc-tag">2-14 유물이 겪은 운명</span><span class="sc-tag">2-4 바로 여기의 현장성</span></div></div></div></div>
+    <div id="cr-history" class="detail-body"><div class="detail-inner">
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>1605년 동래부사 윤훤이 동래읍성 남문 안에 송상현을 기리는 송공사를 세운 것이 시작이다. 1624년 '충렬사' 사액을 받았고, 1652년 지금 자리로 옮기며 안락서원이라 불렀다. 지금은 송상현과 부산진첨사 정발을 비롯해 임진왜란 때 순절한 93위의 위패를 모신다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>입구에 '전즉전의 부전즉가도'와 '전사이 가도난' 문답을 새긴 비석이 있다는 이야기가 전해진다.</p></div>
+    </div></div>
+    <div id="cr-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>본전으로 이어지는 대로와 정원수 / 기와지붕 디테일</li>
+    </ul></div><div class="tip-sec"><h5>📷 사진 팁 — 시청자에게 한마디</h5><ul><li>본전으로 이어지는 대로를 정중앙에서 — 정원수가 양옆 액자</li></ul></div></div></div>
+  </div>
+
+  <div class="sch-body"><div class="bridge"><div class="bridge-row"><span class="bridge-k">연결</span><span>충렬사에서 동래역 방면. 코스의 마지막 자리.</span></div><div class="bridge-row"><span class="bridge-k next">전환 · 정리형</span><span>코스 종료 → 오후 대구로 이동.</span></div></div>
+    <div class="sch-place">★ 동래파전거리 — 점심 · 코스 클로징</div>
+    <div class="sch-sub">충렬사에서 동래역 방면으로 이동. 동래구청 앞 400년 된 팽나무 보호수 곁의 파전 골목. 코스의 마지막 자리.</div>
+    <div class="sch-badges"><span class="sch-badge">1인 가격 <span class="chk">[확인 필요]</span></span><span class="sch-badge">약 70분</span></div>
+    <div class="detail-btns">
+      <button class="detail-btn" onclick="toggleDetail(this,'pj-info')">📍 기본 정보</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'pj-point')">💬 소재 카드</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'pj-history')">📜 이야기</button>
+      <button class="detail-btn" onclick="toggleDetail(this,'pj-shot')">🎬 촬영·팁</button>
+    <button class="detail-btn" onclick="toggleDetail(this,'pj-roman')">🌙 낭만</button></div>
+    <div id="pj-info" class="detail-body"><div class="detail-inner"><ul>
+      <li>부산 동래구 명륜로94번길 43-10 일대 (동래구청 앞)</li>
+      <li>도시철도 1호선 동래역 2번 출구, 동래구청 방면 도보 5분 (우천 파일 기준)</li>
+      <li>특정 가게가 아니라 골목 단위로 선택</li>
+    </ul></div></div>
+    <div id="pj-point" class="detail-body"><div class="detail-inner"><div class="tone-line">🎭 이 장소의 톤 — 로컬음식 도전 + 여운 — 클로징은 조용히</div><div class="flow6"><div class="flow6-h">장소 흐름 — 6단계 (3-1)</div><table><tr><td class="n">1. 도입</td><td>“왜 하필 동래에 파전 골목이 있을까요?” <span class="mk">[여기서 질문]</span></td></tr><tr><td class="n">2. 사실</td><td>조선쪽파를 가지런히 깔고 해물을 얹어 부친 뒤 달걀물을 끼얹는 동래파전.</td></tr><tr><td class="n">3. 예고</td><td>(생략 — 마지막 장소라 짧게)</td></tr><tr><td class="n">4. 증거</td><td>번철 위 파전(소리·냄새), 400년 팽나무 보호수.</td></tr><tr><td class="n">5. 반박</td><td>“부산의 중심은 원래 바닷가?” — 원래 중심은 동래였다.</td></tr><tr><td class="n">6. 마무리</td><td>클로징 질문 카드</td></tr></table><div class="ver"><span class="ver-k">30초</span><span>“관청 손님 술상에서 발달했다는 동래파전. 부산의 가장 아래층, 동래에서 끝납니다.”</span></div><div class="ver"><span class="ver-k">3분</span><span>도입 → 파전 카드 → 클로징 질문 카드.</span></div></div><div class="qc"><div class="qc-k">질문 카드 · 클로징 — 전체 질문 회수</div><div class="qc-say">“첫날 부산역 앞에서 물었습니다. 이 원도심 땅 밑에 몇 겹의 부산이 쌓여 있을까. 사흘 동안 북항의 지금 층에서 시작해 피란민의 시장, 일제강점기 건물, 그 아래 초량왜관 터까지 걸어 내려왔습니다. <span class="mk">[천천히]</span> 그런데 가장 아래층은 원도심 안에 없었습니다. 초량도, 왜관도, 조선 시대엔 모두 이 동래가 다스리던 땅이었거든요. 바닷가 원도심은 동래 위에 얹힌 새로운 층이었던 겁니다. 부산을 제대로 보려면 바다에서 동래까지, 한 번은 걸어 봐야 합니다.” → “같은 곳도 더욱 풍족한 여행, 여행바구니 가이드 고민수였습니다.” → 번철·팽나무 시네마틱.</div><div class="qc-note">고정 클로징 인사는 이 자리에서 한 번만. 마지막은 여운(3-5).</div></div><div class="sc"><div class="sc-t">동래파전은 관청 손님 술상에서 발달했다는 설명이 있다.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">동래구청 앞 400년 팽나무 보호수, 마주한 파전집들</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“이 나무, 400년 됐답니다. 그럼 파전은 왜 하필 동래였을까요? <span class="mk">[여기서 질문]</span>”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">👥 팽나무 찾기 (전환 미션 회수)</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">조선시대 동래도호부는 대일 외교와 군사의 요지라 고관 왕래가 잦았고, 이들을 대접하던 술상 안주로 파전이 발달했다는 설명이 원로 소설가 최해군의 고증으로 소개된다. 은퇴한 동래 관기들이 장터에서 파전을 부치며 서민 음식으로 퍼졌다는 이야기도 전해진다.</span></div><div class="sc-tags"><span class="sc-tag tr-yasa">야사·설</span><span class="sc-tag act">활동</span><span class="sc-tag">2-2③ 왜?③ 다스림</span><span class="sc-tag">2-15 보통 사람의 시선</span><span class="sc-tag">4-4 참여</span></div></div><div class="sc"><div class="sc-t">쪽파는 가지런히, 달걀물은 마지막에.</div><div class="sc-row"><span class="sc-k">보이는 닻</span><span style="flex:1">번철 위 파전</span></div><div class="sc-row"><span class="sc-k">멘트</span><span class="sc-say" style="flex:1">“소리 들어 보세요. 쪽파를 가지런히 깔고, 해물을 올리고, 달걀물은 맨 마지막에.”</span></div><div class="sc-row"><span class="sc-k">활동</span><span class="sc-act" style="flex:1">🎥 번철 클로즈업 — 지글거리는 소리(오감)</span></div><div class="sc-row"><span class="sc-k">풀이</span><span style="flex:1">조선쪽파를 가지런히 깔고 대합·새우·굴·홍합 등 해물을 얹어 부친 뒤 마지막에 달걀물을 끼얹는 것이 동래파전의 특징이며, 초고추장에 찍어 먹는다.</span></div><div class="sc-tags"><span class="sc-tag tr-jeongsa">정사</span><span class="sc-tag act">활동</span><span class="sc-tag">2-1 몸의 공통 경험</span><span class="sc-tag">4-1 묘사</span></div></div></div></div>
+    <div id="pj-history" class="detail-body"><div class="detail-inner"><div class="guide-tip"><div class="guide-tip-label">가이드 포인트</div><p>코스 전체 질문을 닫는 자리. 사흘 동안 깐 복선(초량=동래 마을, 왜관=동래부 관할, 1914년 분리)을 한 문장씩 불러낸 뒤 "가장 아래층은 원도심 밖"으로 닫는다.</p></div>
+      <div class="src-row"><span class="src-tag src-lore">야사·설</span><p>조선시대 동래도호부는 대일 외교와 군사의 요지라 고관 왕래가 잦았고, 이들을 대접하던 술상 안주로 파전이 발달했다는 설명이 원로 소설가 최해군의 고증으로 소개된다. 은퇴한 동래 관기들이 여염집과 장터에서 파전을 부치며 서민 음식으로 퍼졌다는 이야기도 전해진다.</p></div>
+      <div class="src-row"><span class="src-tag src-record">정사</span><p>조선쪽파를 가지런히 깔고 대합·새우·굴·홍합 등 해물을 얹어 부친 뒤 마지막에 달걀물을 끼얹는 것이 동래파전의 특징이며, 초고추장에 찍어 먹는다. 동래구청 앞 400년 된 팽나무 보호수를 사이에 두고 두 원조집이 마주한다.</p></div>
+    </div></div>
+    <div id="pj-shot" class="detail-body"><div class="detail-inner"><div class="tip-sec"><h5>🎥 촬영 컷 — 우리가 찍을 것</h5><ul>
+      <li>번철 위 파전 클로즈업 / 팽나무 보호수 / 식탁 클로징 멘트 컷</li>
+    </ul></div><div class="tip-sec"><h5>🚗 이동 팁</h5><ul><li>도시철도 1호선 동래역 2번 출구, 동래구청 방면 도보 5분</li></ul></div></div></div><div id="pj-roman" class="detail-body"><div class="detail-inner"><div class="roman-card"><span class="rc-type">소비형</span><table><tr><th>언제</th><td>마지막 점심</td></tr><tr><th>무엇을</th><td>파전에 막걸리 한 잔 — 로컬 술+안주 페어링</td></tr><tr><th>찍는 법</th><td>번철 위 파전 → 잔 클로즈업</td></tr><tr><th>안 될 때</th><td>운전자는 무알코올로</td></tr></table></div><div class="notice-inline">낭만 장면은 설명·나레이션 없이 행동과 분위기로만 전달한다(현장음·BGM). 효율보다 "굳이 해 보는 것"이 포인트.</div></div></div>
+  </div>
+
+  <div class="sch-body">
+    <div class="sch-place">코스 밖 — 대구로 이동 (완충)</div>
+    <div class="sch-sub">점심 후 코스 종료. 오후에 대구로 이동해 숙박(대구 코스와 같은 숙소). 기획테마용 촬영 또는 휴식.</div>
+  </div>
+
+</div>
+
+<div class="cost-block"><div class="cost-block-title">✅ 최종 점검 (기준 부록 D)</div><table class="cost-table"><tr><th>구분</th><th>항목</th><th>상태</th></tr><tr><td>정리 (1부)</td><td>장소별 사실 연도 포함 정리 — 📜 이야기 탭(v1 유지)</td><td>○</td></tr><tr><td>고르기 (2부)</td><td>보는 것을 하는 것으로: 👥 활동(세기·찾기·맞히기·엽서 쓰기·손가락으로 세 겹 짚기)</td><td>○</td></tr><tr><td>고르기 (2부)</td><td>핵심 포인트는 기준 2개 이상 겹치는 소재 — 카드 태그로 확인</td><td>○</td></tr><tr><td>배치 (3부)</td><td>★ 핵심 장소 7곳 6단계 표 + 30초·3분, 나머지 30초 또는 카드</td><td>○</td></tr><tr><td>배치 (3부)</td><td>복선과 회수 — 초량=동래 마을(1일차) → 1914년 분리(2일차) → 왜관=동래부 관할(2일차) → 동헌(3일차) → 파전 클로징 / 담장 두 이름 → 장기려·우체통 / 백제병원 → 차이나타운 / 초량교회 백산상회 → 백산기념관</td><td>○</td></tr><tr><td>배치 (3부)</td><td>첫 3분 + 하루 시작(2·3일차) + 1일차 작은 회수 + 2일차 정리 + 전환 멘트</td><td>○</td></tr><tr><td>배치 (3부)</td><td>정서 곡선 — 장기려 → 엽서 / 역사관 → 동헌(발견) → 충렬사(짧게) → 파전(여운)</td><td>○</td></tr><tr><td>말하기 (4부)</td><td>오감 — 168계단 숨소리, 번철 소리 / 한자 풀이(山腹·戰死易 假道難) / [여기서 질문]·[침묵]·[천천히]</td><td>○</td></tr><tr><td>맞추기 (5부)</td><td>성인 + 이동투어 기본, 👥 활동 대체안. 하늘길·우체통 단차 반영</td><td>○</td></tr><tr><td>검증 (6부)</td><td>정사·야사·설 구분, 가사 미인용, 출처 1건·자료 상충 ⚠️ 유지</td><td>○</td></tr></table></div>
+<div class="cost-block">
+  <div class="cost-block-title">💰 예상 실비 (1인 기준)</div>
+  <table class="cost-table">
+    <tr><th>구분</th><th>항목</th><th>금액</th><th>비고</th></tr>
+    <tr><td>1일차</td><td>점심 · 초량육미 저녁</td><td>약 2~3.5만원</td><td><span class="chk">[확인 필요]</span></td></tr>
+    <tr><td>1일차</td><td>이바구공작소·장기려 더나눔·우체통 엽서</td><td>확인 필요</td><td>무료일 가능성 있으나 미확인</td></tr>
+    <tr><td>2일차</td><td>부산타워 전망대</td><td>확인 필요</td><td>운영사 변동</td></tr>
+    <tr><td>2일차</td><td>점심(자유) · 자갈치 저녁</td><td>약 2.5~4.5만원</td><td><span class="chk">[확인 필요]</span></td></tr>
+    <tr><td>2일차</td><td>조식 재료(어묵·멸치·미역·다시마)</td><td>확인 필요</td><td>소량 구매</td></tr>
+    <tr><td>3일차</td><td>동래 관람 · 파전 점심</td><td>확인 필요</td><td></td></tr>
+    <tr><td>교통</td><td>도시철도</td><td>확인 필요</td><td>1·4호선 수회</td></tr>
+  </table>
+  <div class="cost-total">숙박비 제외. 대부분 무료 관람지라 식비 비중이 크다. 금액은 검증되지 않았으니 촬영 전 확인.</div>
+</div>
+
+<script>
+function toggleDetail(btn, id) {
+  const body = document.getElementById(id);
+  body.classList.toggle("open");
+  btn.classList.toggle("open");
+}
+function toggleItem(header) {
+  const content = header.nextElementSibling;
+  const toggle = header.querySelector(".sch-toggle");
+  const open = content.classList.toggle("open");
+  toggle.textContent = open ? "▲" : "▼";
+}
+</script>
+<a href="index.html" style="position:fixed;left:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:9999;background:#1f3a5f;color:#fff;text-decoration:none;font:700 14px/1 -apple-system,'Apple SD Gothic Neo',sans-serif;padding:10px 14px;border-radius:99px;box-shadow:0 2px 8px rgba(0,0,0,.25)">← 목록</a></body>
+</html>
